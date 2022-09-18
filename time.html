@@ -12,10 +12,7 @@
             padding: 10px;
             position: relative;
             color: #333333;
-        }
-
-        li {
-            margin-bottom: 10px;
+            font-size: 14px;
         }
 
         .time {
@@ -24,7 +21,6 @@
         }
 
         .time li {
-            font-size: 16px;
             margin-bottom: 10px;
         }
     </style>
@@ -32,18 +28,13 @@
 
 <body>
     <ul class="time">
-        <li style="color: #999999;font-size: 12px;">
+        <li id="title">
             万年历 · 时间在流逝 · 开心健康
         </li>
-        <li id="time">
-            时间
-        </li>
-        <li id="date">
-            时间
-        </li>
-        <li id="week">
-            时间
-        </li>
+        <li id="time"></li>
+        <li id="date"></li>
+        <li id="week"></li>
+        <li id="footer"></li>
     </ul>
     <script>
         function update() {
@@ -65,8 +56,28 @@
             return ('0' + num).slice(-2)
         }
 
-        update()
-        setInterval("update()", 1000)
+        function queryURLParams(url) {
+            let pattern = /(\w+)=(\w+)/ig; //定义正则表达式
+            let parames = {}; // 定义参数对象
+            url.replace(pattern, ($, $1, $2) => {
+                parames[$1] = $2;
+            });
+            return parames;
+        }
+        window.onload = function () {
+            update()
+            setInterval("update()", 1000)
+            const params = queryURLParams(location.href)
+            if (params.title) {
+                document.getElementById("title").innerHTML = params.title == '0' ? '' : params.title
+            }
+            if (params.footer) {
+                document.getElementById("footer").innerHTML = params.footer
+            }
+            if (params.size) {
+                document.body.style.fontSize = params.size + 'px'
+            }
+        }
     </script>
 </body>
 
