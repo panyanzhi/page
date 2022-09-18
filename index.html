@@ -20,9 +20,7 @@
 
         img {
             zoom: 0.3;
-            position: absolute;
-            right: 60px;
-            top: 60px;
+            vertical-align: middle;
         }
 
         li p:first-child {
@@ -30,14 +28,21 @@
             font-size: 13px;
         }
 
+        .hezuo {
+            display: inline-block;
+            vertical-align: middle;
+            padding-right: 20px;
+        }
+
         .time {
             text-align: center;
-            line-height: 60px;
             color: #999999;
+            padding-bottom: 50px;
         }
 
         .time li {
-            font-size: 32px;
+            font-size: 18px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -68,20 +73,22 @@
             <p>微信：AnGeWeChat</p>
         </li>
     </ul>
-    <hr style="margin: 20px 0;" />
+    <img src="./wechat.png" />
+    <hr style="margin: 20px 0;border: 0.5px dashed #999999;" />
     <ul class="time">
-        <h2 style="color: #999999;">万年历 · 时间在流逝 · 开心健康</h2>
+        <li style="color: #999999;font-size: 12px;">
+            万年历 · 时间在流逝 · 开心健康
+        </li>
         <li id="time">
             时间
         </li>
         <li id="date">
             时间
         </li>
-        <li id="week">
+        <li id="week" >
             时间
         </li>
     </ul>
-    <img src="./wechat.png" />
     <script>
         function update() {
             var date = new Date()
