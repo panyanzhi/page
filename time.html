@@ -31,6 +31,7 @@
         <li id="title">
             万年历 · 时间在流逝 · 开心健康
         </li>
+        <li id="age"></li>
         <li id="time"></li>
         <li id="date"></li>
         <li id="week"></li>
@@ -73,6 +74,10 @@
             }
             if (params.footer) {
                 document.getElementById("footer").innerHTML = params.footer
+            }
+            if (params.age) {
+                var age = 100 - parseInt(params.age)
+                document.getElementById("age").innerHTML = '若你能活到100岁<br />那么你还剩约' + age + '年'
             }
             if (params.size) {
                 document.body.style.fontSize = params.size + 'px'
