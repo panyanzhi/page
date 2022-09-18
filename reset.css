@@ -1,0 +1,268 @@
+/* 公共样式--start */
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+  margin: 0;
+  padding: 0;
+}
+*{box-sizing: border-box;}
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  font-family:  "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
+  font-size:14px;
+  color:#333;
+  background-color: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6{font-weight:normal;}
+ul,ol {
+  list-style: none;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: #232323;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+input, textarea {
+  outline: none;
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: ".";
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+  overflow:hidden;
+}
+
+.fl {
+  float: left
+}
+
+.fr {
+  float: right
+}
+
+.tl {
+  text-align: left;
+}
+
+.tc {
+  text-align: center
+}
+
+.tr {
+  text-align: right;
+}
+
+.ellipse {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.inline{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* 公共样式 -- end */
+
+/* element-ui -- start */
+
+.el-tooltip__popper {
+  max-width: 500px;
+}
+
+.el-image-viewer__close .el-icon-circle-close {
+  color: lightgray;
+}
+
+/* color 部分 */
+
+.el-select .el-input.is-focus .el-input__inner {
+  border-color:#0580FF;
+}
+
+.el-select .el-input__inner:focus {
+  border-color:#0580FF;
+}
+
+.el-select-dropdown__item.selected {
+  color:#0580FF;
+}
+
+.el-button:focus,.el-button:hover {
+  color: #0580FF;
+  border-color: #c6e2ff;
+  background-color: #ecf5ff
+}
+
+.el-button:active {
+  color:#0580FF;
+  border-color:#0580FF;
+}
+
+.el-button.is-plain:focus,.el-button.is-plain:hover {
+  background: #FFF;
+  border-color:#0580FF;
+  color:#0580FF
+}
+
+.el-button.is-active,.el-button.is-plain:active {
+  color:#5591fe;
+  border-color:#0580FF
+}
+
+.el-button--primary {
+  background-color:#0580FF;
+  border-color:#0580FF;
+}
+
+.el-button--primary:focus,.el-button--primary:hover {
+  color:  white;
+  background:#0580FF;
+}
+
+
+.el-checkbox__input.is-checked .el-checkbox__inner, 
+.el-checkbox__input.is-indeterminate .el-checkbox__inner,
+.el-radio__input.is-checked .el-radio__inner {
+  background-color:#0580FF;
+  border-color:#0580FF;
+}
+
+.el-radio__input.is-checked+.el-radio__label,
+.el-checkbox__input.is-checked+.el-checkbox__label {
+  color:#0580FF;
+}
+
+.el-popper[x-placement^=bottom] {
+  margin-top: 6px;
+}
+
+.mint-popup-right {
+   width: 100%;
+   height: 100%;
+}
+
+.el-pager .number {
+  font-weight: normal;
+}
+
+.el-message {
+  top: 90px !important;
+}
+
+.el-message-box {
+  width: 75%;
+  font-size: 14px;
+  border: none;
+  padding-bottom: 0px;
+}
+
+.el-message-box__header {
+  background-color: #ECEFF1;
+}
+
+.el-message-box__title {
+  font-size: 16px;
+}
+
+.el-message-box__btns button:nth-child(2) {
+  margin-left: 30px;
+}
+
+.el-message-box__btns {
+  text-align: center;
+  padding: 8px 15px;
+}
+
+.el-message-box__btns button {
+  padding: 7px 15px;
+}
+
+.el-popover {
+  min-width: 80px;
+  padding-bottom: 4px;
+}
+
+/* element-ui -- end */
+
+.echarts {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/*滚动条样式 start*/
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+  width: 5px;  /*滚动条宽度*/
+  height: 5px  /*滚动条高度*/
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+  /*滚动条的背景区域的内阴影*/
+  /*box-shadow:0px 1px 3px rgba(0,0,0,0.3) inset;*/
+
+  /*滚动条的背景区域的圆角*/
+  border-radius: 4px;
+
+  /*滚动条的背景颜色*/
+  background-color:#F5F5F5 ;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+  /*滚动条的内阴影*/
+  /*box-shadow:0px 1px 3px rgba(0,0,0,0.3) inset;*/
+
+  /*滚动条的圆角*/
+  border-radius: 4px;
+
+  /*滚动条的背景颜色*/
+  background-color: #E6E8E8;
+}
+
+/*滚动条样式 end*/
+
+.el-table th {
+  background: #F2F8FF !important;
+  color: #757575;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 2px 0;
+  height: 40px;
+}
+
