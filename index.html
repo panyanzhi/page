@@ -70,7 +70,7 @@
     </ul>
     <hr style="margin: 20px 0;" />
     <ul class="time">
-        <h2 style="color: #999999;">时间在流逝</h2>
+        <h2 style="color: #999999;">万年历 · 时间在流逝 · 开心健康</h2>
         <li id="time">
             时间
         </li>
@@ -89,7 +89,7 @@
             date.setMinutes(date.getMinutes() + utc8DiffMinutes)
 
             var timeString = zeroNum(date.getHours()) + ':' + zeroNum(date.getMinutes()) + ':' + zeroNum(date.getSeconds())
-            var dateString = zeroNum((date.getMonth() + 1)) + '月' + zeroNum(date.getDate()) + '日'
+            var dateString = date.getFullYear() + '年' + zeroNum((date.getMonth() + 1)) + '月' + zeroNum(date.getDate()) + '日'
             var weekList = ['日', '一', '二', '三', '四', '五', '六']
             var weekString = '星期' + weekList[date.getDay()]
 
