@@ -33,17 +33,6 @@
             vertical-align: middle;
             padding-right: 20px;
         }
-
-        .time {
-            text-align: center;
-            color: #999999;
-            padding-bottom: 50px;
-        }
-
-        .time li {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
     </style>
 </head>
 
@@ -70,48 +59,14 @@
         </li>
         <li>
             <p>联系方式：</p>
-            <p>微信：AnGeWeChat</p>
+            <p>微信：angewechat</p>
+        </li>
+        <li style="text-align: center">
+            <img src="./wechat.png" />
         </li>
     </ul>
-    <img src="./wechat.png" />
-    <hr style="margin: 20px 0;border: 0.5px dashed #999999;" />
-    <ul class="time">
-        <li style="color: #999999;font-size: 12px;">
-            万年历 · 时间在流逝 · 开心健康
-        </li>
-        <li id="time">
-            时间
-        </li>
-        <li id="date">
-            时间
-        </li>
-        <li id="week" >
-            时间
-        </li>
-    </ul>
-    <script>
-        function update() {
-            var date = new Date()
-            var utc8DiffMinutes = date.getTimezoneOffset() + 480
-            date.setMinutes(date.getMinutes() + utc8DiffMinutes)
-
-            var timeString = zeroNum(date.getHours()) + ':' + zeroNum(date.getMinutes()) + ':' + zeroNum(date.getSeconds())
-            var dateString = date.getFullYear() + '年' + zeroNum((date.getMonth() + 1)) + '月' + zeroNum(date.getDate()) + '日'
-            var weekList = ['日', '一', '二', '三', '四', '五', '六']
-            var weekString = '星期' + weekList[date.getDay()]
-
-            document.getElementById("time").innerHTML = timeString
-            document.getElementById("date").innerHTML = dateString
-            document.getElementById("week").innerHTML = weekString
-        }
-
-        function zeroNum(num) {
-            return ('0' + num).slice(-2)
-        }
-
-        update()
-        setInterval("update()", 1000)
-    </script>
+    <hr style="border: 0.5px dashed #999999;" />
+    <iframe src="./time.html" frameborder="0" width="100%" height="150" ></iframe>
 </body>
 
 </html>
