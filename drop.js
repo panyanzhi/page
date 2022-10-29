@@ -59,9 +59,11 @@ border-radius: 4px;" value="24" />
                 dashboard.innerText = fileName
                 const num = parseInt(document.getElementById('pyz_num').value)
                 const pointIndex = fileName.lastIndexOf('.')
-                const sourceIdText = fileName.substr(pointIndex - num, num)
+                const sourceIdText = fileName.substring(pointIndex - num, pointIndex)
                 title.value = fileName.split(sourceIdText)[0]
                 sourceId.value = sourceIdText
+                title.dispatchEvent(new Event('input'))
+                sourceId.dispatchEvent(new Event('input'))
             }
         })
     }, 1);
