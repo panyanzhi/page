@@ -60,7 +60,7 @@ border-radius: 4px;" value="24" />
                 const num = parseInt(document.getElementById('pyz_num').value)
                 const pointIndex = fileName.lastIndexOf('.')
                 const sourceIdText = fileName.substring(pointIndex - num, pointIndex)
-                title.value = fileName.split(sourceIdText)[0]
+                title.value = fileName.split(sourceIdText)[0] + sourceIdText
                 sourceId.value = sourceIdText
                 title.dispatchEvent(new Event('input'))
                 sourceId.dispatchEvent(new Event('input'))
