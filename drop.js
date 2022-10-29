@@ -2,10 +2,18 @@
 
 if (confirm(`攀岩志提示：即将为您加载自动拆解程序？`)) {
     setTimeout(() => {
-        appendDiv()
+        try {
+            appendDiv()
+        } catch (error) {
+            alert('攀岩志提示：宿主不正确\n' + error.message)
+        }
     }, 2 * 1000);
 }
 function appendDiv() {
+    const target1 = document.querySelector('.el-form label[for=title]')
+    const target2 = document.querySelector('.el-form label[for=sourceId]')
+    const title = target1.parentElement.querySelector('input')
+    const sourceId = target2.parentElement.querySelector('input')
     const div = document.createElement('div')
     div.className = 'pan-yan-zhi'
     div.innerHTML = `<span id="dashboard" class="dashboard" style="width: calc(100% - 40px);
@@ -30,13 +38,7 @@ height: 44px;
 text-align: center;
 border-radius: 4px;" value="24" />
 `
-    var brother = document.querySelector('.resource-upload');
-    brother.insertAdjacentElement("afterend", div);
-    const target1 = document.querySelector('.el-form label[for=title]')
-    const target2 = document.querySelector('.el-form label[for=sourceId]')
-    const title = target1.parentElement.querySelector('input')
-    const sourceId = target2.parentElement.querySelector('input')
-
+    document.querySelector('.resource-upload').insertAdjacentElement("afterend", div);
     setTimeout(() => {
         var dashboard = document.getElementById("dashboard")
         dashboard.addEventListener("dragover", function (e) {
