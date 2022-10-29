@@ -64,6 +64,8 @@ border-radius: 4px;" value="24" />
                 sourceId.value = sourceIdText
                 title.dispatchEvent(new Event('input'))
                 sourceId.dispatchEvent(new Event('input'))
+                // 输入框内容超出输入框宽度时，可以自动定位最后面
+                title.scrollLeft = title.scrollWidth
             }
         })
     }, 1);
