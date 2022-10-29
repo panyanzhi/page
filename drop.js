@@ -16,7 +16,7 @@ function appendDiv() {
     const sourceId = target2.parentElement.querySelector('input')
     const div = document.createElement('div')
     div.className = 'pan-yan-zhi'
-    div.innerHTML = `<span id="dashboard" class="dashboard" style="width: calc(100% - 40px);
+    div.innerHTML = `<p id="dashboard" class="dashboard" style="width: calc(100% - 40px);
 max-height: 100px;
 box-sizing: border-box;
 padding: 12px;
@@ -29,7 +29,7 @@ cursor: text;
 white-space: pre-wrap;
 /*word-break: break-all;*/
 word-wrap: break-word;
-overflow-y: auto;">将文件拖动到此处，自动拆解</span>
+overflow-y: auto;">将文件拖动到此处，自动拆解</p>
 <input id="pyz_num" style="width: 36px;
 float: right;
 margin-top: -58px;
