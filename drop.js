@@ -1,10 +1,16 @@
 /* 微信：angewechat; like , i love you ; 2022-10-29 周六 */
 
+const target1 = document.querySelector('.el-form label[for=title]')
+const target2 = document.querySelector('.el-form label[for=sourceId]')
+const title = target1.parentElement.querySelector('input')
+const sourceId = target2.parentElement.querySelector('input')
+let upload = document.querySelector('.resource-upload .el-upload-dragger')
+
 if (confirm(`攀岩志提示：即将为您加载自动拆解程序？`)) {
     setTimeout(() => {
-        try { 
+        try {
             relayout()
-            appendDiv()
+            addNewDropEvent()
         } catch (error) {
             alert('攀岩志提示：宿主不正确\n' + error.message)
         }
@@ -94,4 +100,39 @@ function relayout() {
     insert(obj, btns[1]);
     insert(btns[1], btns[0]);
     insert(btns[0], obj);
+}
+
+function addNewDropEvent() {
+    if (upload) {
+        upload.addEventListener("drop", splitFileName, title, sourceId);
+    } else {
+        var mutation = new MutationObserver(function (e) {
+            const list = e[0].addedNodes;
+            if (list.length > 0) {
+                upload = list[0]
+                if (upload.className.indexOf('el-upload-dragger') >= 0) {
+                    upload.addEventListener("drop", splitFileName, title, sourceId);
+                }
+            }
+        });
+        mutation.observe(document.querySelector('.resource-upload .el-upload--text'), { childList: true })
+    }
+}
+
+
+function splitFileName(e, title, sourceId) {
+    var files = this.files || e.dataTransfer.files
+    if (files && files.length > 0) {
+        const fileName = files[0].name
+        const num = 24 // parseInt(document.getElementById('pyz_num').value)
+        const pointIndex = fileName.lastIndexOf('.')
+        const sourceIdText = fileName.substring(pointIndex - num, pointIndex)
+        title.value = fileName.split(sourceIdText)[0] + sourceIdText
+        sourceId.value = sourceIdText
+        title.dispatchEvent(new Event('input'))
+        sourceId.dispatchEvent(new Event('input'))
+        // 输入框内容超出输入框宽度时，可以自动定位最后面
+        title.scrollLeft = title.scrollWidth
+    }
+
 }
