@@ -13,7 +13,7 @@ if (confirm(`攀岩志提示：即将为您加载自动拆解程序？`)) {
     }, 1 * 1000);
 }
 
-// 调整上传表单的位置
+// 调整上传表单的位置，返回目标元素集合
 function relayout() {
     // 表单右靠齐
     const div = document.querySelector('.el-row .el-col-15')
@@ -42,6 +42,7 @@ function relayout() {
     }
 }
 
+// 在原拖拽框追加自定义drop事件
 function addNewDropEvent({ title, sourceId }) {
     let target = document.querySelector('.resource-upload .el-upload-dragger')
     if (target) {
@@ -63,7 +64,7 @@ function addNewDropEvent({ title, sourceId }) {
     mutation.observe(document.querySelector('.resource-upload .el-upload--text'), { childList: true })
 }
 
-
+// 文件名拆解
 function splitFileName(e, title, sourceId) {
     e.preventDefault()
     e.stopPropagation()
@@ -115,7 +116,7 @@ border-radius: 4px;" value="24" />
     document.querySelector('.resource-upload').insertAdjacentElement("afterend", div);
 }
 
-// 追加拆解拖动框
+// 追加拆解拖动事件
 function setDragDiv({ title, sourceId }) {
     setTimeout(() => {
         const dashboard = document.getElementById("dashboard")
