@@ -2,13 +2,16 @@
 
 if (confirm(`攀岩志提示：即将为您加载自动拆解程序？`)) {
     setTimeout(() => {
-        try {
+        try { 
+            relayout()
             appendDiv()
         } catch (error) {
             alert('攀岩志提示：宿主不正确\n' + error.message)
         }
-    }, 2 * 1000);
+    }, 1 * 1000);
 }
+
+// 追加拆解拖动框
 function appendDiv() {
     const target1 = document.querySelector('.el-form label[for=title]')
     const target2 = document.querySelector('.el-form label[for=sourceId]')
@@ -70,4 +73,25 @@ border-radius: 4px;" value="24" />
         })
     }, 1);
 
+}
+
+// 调整上传表单的位置
+function relayout() {
+    // 表单右靠齐
+    const div = document.querySelector('.el-row .el-col-15')
+    div.style.float = 'right'
+    // 按钮位置对调
+    const btns = document.querySelectorAll('.el-row button')
+    var insert = function (nodeInsert, nodeTo) {
+        if (nodeInsert.insertAdjacentElement) {
+            nodeTo.insertAdjacentElement('beforeBegin', nodeInsert);
+        }
+        else {
+            nodeTo.parentNode.insertBefore(nodeInsert, nodeTo);
+        }
+    }
+    var obj = document.createElement("a");
+    insert(obj, btns[1]);
+    insert(btns[1], btns[0]);
+    insert(btns[0], obj);
 }
