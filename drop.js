@@ -148,6 +148,7 @@ function cloneForm() {
     const brother = document.querySelector('.app-main .el-row')
     brother.style.height = div.style.height
     brother.style.overflow = 'hidden auto'
+    document.body.style.overflow = 'hidden'
     div.onload = function () {
         setTimeout(() => {
             const body = div.contentDocument.body
