@@ -1,6 +1,6 @@
 /* 微信：angewechat; like , i love you ; 2022-10-29 周六 */
 
-if (confirm(`攀岩志提示：即将为您加载自动拆解程序？`)) {
+if (top !== self || confirm(`攀岩志提示：即将为您加载自动拆解程序？`)) {
     setTimeout(() => {
         try {
             const resp = relayout()
@@ -147,7 +147,7 @@ function cloneForm() {
     div.style.border = '1px solid #f1f1f1'
     const brother = document.querySelector('.app-main .el-row')
     brother.style.height = div.style.height
-    brother.style.zoom = 0.7
+    brother.style.zoom = 0.65
     div.onload = function () {
         setTimeout(() => {
             const body = div.contentDocument.body
