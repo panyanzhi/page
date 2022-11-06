@@ -7,6 +7,9 @@ if (confirm(`攀岩志提示：即将为您加载自动拆解程序？`)) {
             appendSplitDiv()
             // setDragDiv(resp)
             addNewDropEvent(resp)
+            if (top === self && confirm(`攀岩志提示：是否开启加速模式`)) {
+                cloneForm()
+            }
         } catch (error) {
             alert('攀岩志提示：宿主不正确\n' + error.message)
         }
@@ -104,7 +107,7 @@ cursor: text;
 white-space: pre-wrap;
 /*word-break: break-all;*/
 word-wrap: break-word;
-overflow-y: auto;">拆解信息将展示到这里，便于比对</p>
+overflow-y: auto;">拆解原始信息将展示到这里</p>
 <input id="pyz_num" style="width: 36px;
 float: right;
 margin-top: -58px;
@@ -133,4 +136,28 @@ function setDragDiv({ title, sourceId }) {
         })
     }, 1);
 
+}
+
+function cloneForm() {
+    const div = document.createElement('iframe')
+    div.id = 'pyz_iframe'
+    div.src = location.href
+    div.style.height = 'calc((100vh - 94px) * 0.5)'
+    div.style.width = '100%'
+    div.style.border = '1px solid #f1f1f1'
+    const brother = document.querySelector('.app-main .el-row')
+    brother.style.height = div.style.height
+    brother.style.zoom = 0.7
+    div.onload = function () {
+        setTimeout(() => {
+            const body = div.contentDocument.body
+            body.querySelector('.app-container').style.zoom = brother.style.zoom
+            body.querySelector('.fixed-header').style.display = 'none'
+            body.querySelector('.fixed-header').className = div.id
+            const script = document.createElement('script');
+            script.src = 'https://panyanzhi.github.io/page/drop.js';
+            body.appendChild(script);
+        }, 1 * 1000)
+    }
+    brother.insertAdjacentElement("afterend", div);
 }
