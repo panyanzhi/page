@@ -147,11 +147,9 @@ function cloneForm() {
     div.style.border = '1px solid #f1f1f1'
     const brother = document.querySelector('.app-main .el-row')
     brother.style.height = div.style.height
-    brother.style.zoom = 0.65
     div.onload = function () {
         setTimeout(() => {
             const body = div.contentDocument.body
-            body.querySelector('.app-container').style.zoom = brother.style.zoom
             body.querySelector('.fixed-header').style.display = 'none'
             body.querySelector('.app-main').style.paddingTop = '0'
             const script = document.createElement('script');
