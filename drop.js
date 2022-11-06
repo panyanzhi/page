@@ -153,7 +153,7 @@ function cloneForm() {
             const body = div.contentDocument.body
             body.querySelector('.app-container').style.zoom = brother.style.zoom
             body.querySelector('.fixed-header').style.display = 'none'
-            body.querySelector('.fixed-header').className = div.id
+            body.querySelector('.app-main').style.paddingTop = '0'
             const script = document.createElement('script');
             script.src = 'https://panyanzhi.github.io/page/drop.js';
             body.appendChild(script);
