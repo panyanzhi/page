@@ -142,11 +142,12 @@ function cloneForm() {
     const div = document.createElement('iframe')
     div.id = 'pyz_iframe'
     div.src = location.href
-    div.style.height = 'calc((100vh - 94px) * 0.5)'
+    div.style.height = 'calc((100vh - 182px) * 0.5)'
     div.style.width = '100%'
     div.style.border = '1px solid #f1f1f1'
     const brother = document.querySelector('.app-main .el-row')
     brother.style.height = div.style.height
+    brother.style.overflow = 'auto hidden'
     div.onload = function () {
         setTimeout(() => {
             const body = div.contentDocument.body
