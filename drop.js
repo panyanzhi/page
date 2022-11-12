@@ -23,6 +23,13 @@ function relayout() {
     div.style.float = 'right'
     // 按钮位置对调
     const btns = document.querySelectorAll('.el-row button')
+    // 回车控制上传按钮点击
+    document.onkeydown = function (event) {
+        var e = event || window.event;
+        if (e && e.keyCode == 13) { 
+            btns[0].click();
+        }
+    };
     var insert = function (nodeInsert, nodeTo) {
         if (nodeInsert.insertAdjacentElement) {
             nodeTo.insertAdjacentElement('beforeBegin', nodeInsert);
