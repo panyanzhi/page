@@ -69,12 +69,15 @@
             return '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).substr(-6);
         }
         function queryURLParams(url) {
-            let pattern = /(\w+)=(\w+)/ig; //定义正则表达式
-            let parames = {}; // 定义参数对象
-            url.replace(pattern, ($, $1, $2) => {
-                parames[$1] = $2;
-            });
-            return parames;
+            let href = decodeURI(url)
+            let query = href.substring(href.indexOf('?') + 1);
+            let param = query.split("&");
+            let obj = {}
+            for (var i = 0; i < param.length; i++) {
+                let per = param[i].split("=");
+                obj[per[0]] = per[1]
+            }
+            return obj;
         }
         window.onload = function () {
             const date = new Date()
