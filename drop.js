@@ -7,9 +7,9 @@ if (top !== self || confirm(`攀岩志提示：即将为您加载自动拆解程
             appendSplitDiv()
             // setDragDiv(resp)
             addNewDropEvent(resp)
-            if (top === self && confirm(`攀岩志提示：是否开启加速模式`)) {
-                cloneForm()
-            }
+            // if (top === self && confirm(`攀岩志提示：是否开启加速模式`)) {
+            //     cloneForm()
+            // }
         } catch (error) {
             alert('攀岩志提示：宿主不正确\n' + error.message)
         }
@@ -23,13 +23,6 @@ function relayout() {
     div.style.float = 'right'
     // 按钮位置对调
     const btns = document.querySelectorAll('.el-row button')
-    // 回车控制上传按钮点击
-    document.onkeydown = function (event) {
-        var e = event || window.event;
-        if (e && e.keyCode == 13) { 
-            btns[0].click();
-        }
-    };
     var insert = function (nodeInsert, nodeTo) {
         if (nodeInsert.insertAdjacentElement) {
             nodeTo.insertAdjacentElement('beforeBegin', nodeInsert);
@@ -105,7 +98,7 @@ function appendSplitDiv() {
 max-height: 100px;
 box-sizing: border-box;
 padding: 12px;
-border: 2px dashed #F8BBD0;
+border: 2px dashed #d3d3d3;
 border-radius: 5px;
 font-size: 14px;
 margin-top: 10px;
@@ -118,7 +111,7 @@ overflow-y: auto;">拆解原始信息将展示到这里</p>
 <input id="pyz_num" style="width: 36px;
 float: right;
 margin-top: -58px;
-border: 1px solid #dcdfe6;
+border: 1px solid #d3d3d3;
 height: 44px;
 text-align: center;
 border-radius: 4px;" value="24" />
