@@ -39,6 +39,19 @@ function relayout() {
     const target2 = document.querySelector('.el-form label[for=sourceId]')
     const title = target1.parentElement.querySelector('input')
     const sourceId = target2.parentElement.querySelector('input')
+    // 回车控制上传按钮点击
+    document.onkeydown = function (event) {
+        var e = event || window.event;
+        if (e && e.keyCode == 13) {
+            btns[0].click();
+        }
+    };
+    document.addEventListener('keydown',function (event) {
+        var e = event || window.event;
+        if (e && e.keyCode == 13) {
+            btns[0].click();
+        }
+    })
     return {
         title,
         sourceId
