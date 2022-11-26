@@ -33,20 +33,23 @@
 <body>
     <ul>
         <li>
+            <p id="title" style="color: magenta;">您好，欢迎<span id="welcome"></span>来到这儿！</p>
+        </li>
+        <li>
             <h2>交流与合作</h2>
         </li>
         <li>
             <p>昵称：攀岩志（团队）</p>
-            <p>旁白：他们由一群热爱开发的小伙伴组队而成，愿意利用业余时间承接些软件开发的项目工程，以此助力广大有志者使用软件的形式来管理或推广自己公司产品与业务。</p>
-            <p>slogan：时间是业余的，技术是专业的！</p>
+            <p>我们由一群热爱开发的小伙伴组队而成，期望与同道中人交流探讨软件开发技术。</p>
+            <p>也期待广大有志者愿意让我们为您打造专业、趁手的软件利器，利用“互联网+”形式来管理或推广自己的产品与业务。</p>
         </li>
         <li>
             <p>专业编程技术栈：(经验值：<span id="jy1">9年，2022</span>)</p>
-            <p>Java、C#、iOS、Android、微信小程序、Electron开发、Python、爬虫、大数据分析等</p>
+            <p>Java、C#、C、Flutter、iOS、Android、Electron、Vue、Python、Echart等</p>
         </li>
         <li>
             <p>专业软件开发：(经验值：<span id="jy2">9年，2022</span>)</p>
-            <p>App、小程序、ERP系统、OA系统、客户端、网站等各种软件开发</p>
+            <p>毕设答疑，App、小程序、ERP系统、OA系统、客户端、门户网站、运营管理系统、爬虫、大数据分析等各种软件开发</p>
         </li>
         <li>
             <p>专业设计：(经验值：<span id="jy3">9年，2022</span>)</p>
@@ -57,18 +60,38 @@
             <p>微信：angewechat</p>
         </li>
         <li style="text-align: center">
-            <img src="./wechat.png" />
+            <img src="./wechat.png" id="contact" style="border: 1px dashed magenta;" />
         </li>
     </ul>
-    <hr style="border: 0.5px dashed #999999;" />
-    <iframe src="./time.html" frameborder="0" width="100%" height="150" ></iframe>
+    <iframe src="./time.html" frameborder="0" width="100%" height="150"></iframe>
     <script>
-        window.onload = function() {
+        function randomHexColor() { //随机生成十六进制颜色
+            return '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).substr(-6);
+        }
+        function queryURLParams(url) {
+            let href = decodeURI(url)
+            let query = href.substring(href.indexOf('?') + 1);
+            let param = query.split("&");
+            let obj = {}
+            for (var i = 0; i < param.length; i++) {
+                let per = param[i].split("=");
+                obj[per[0]] = per[1]
+            }
+            return obj;
+        }
+        window.onload = function () {
             const date = new Date()
             const year = date.getFullYear()
             document.getElementById("jy1").innerHTML = (year - 2012) + '年，' + year
             document.getElementById("jy2").innerHTML = (year - 2013) + '年，' + year
             document.getElementById("jy3").innerHTML = (year - 2013) + '年，' + year
+            const params = queryURLParams(location.href)
+            if (params.from) {
+                document.getElementById("welcome").innerHTML = '从“' + params.from + '”'
+            }
+            const color = randomHexColor()
+            document.getElementById("title").style.color = color
+            document.getElementById("contact").style.borderColor = color
         }
     </script>
 </body>
