@@ -1,0 +1,19 @@
+{
+  "name": "panyanzhi",
+  "version": "1.0.0",
+  "description": "panyanzhi - site",
+  "scripts": {
+    "save": "git add . && git commit -m 'fix bug'",
+    "push": "git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panyanzhi/page.git"
+  },
+  "author": "vue-admin <panyanzhi520@icloud.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/panyanzhi/page/issues"
+  },
+  "homepage": "https://github.com/panyanzhi/page#readme"
+}
