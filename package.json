@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "panyanzhi - site",
   "scripts": {
-    "save": "git add . && git commit -m 'fix bug'",
+    "save": "git add . && git commit -m 'fix bug2'",
     "push": "git push"
   },
   "repository": {
