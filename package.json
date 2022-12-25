@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "panyanzhi - site",
   "scripts": {
-    "save": "git add . && git commit -m 'color update'",
+    "save": "git add . && git commit -m 'icon'",
     "push": "git push"
   },
   "repository": {
