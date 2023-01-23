@@ -22,32 +22,25 @@ function vueOptions () {
     const options = [
         `{
             el: '#upload-mode-btn',
-            template: '<el-button @click="visible = true">Button</el-button>
-            <el-dialog :visible.sync="visible" title="Hello world">
-              <p>Try Element</p>
-            </el-dialog>',
             data: function () {
                 return {
                     visible: false
                 }
             },
             methods: {
-
+                xxx: function() {
+                    this.visible = true
+                }
             }
         }`,
         `{
             el: '#upload-mode-page',
-            template: '<el-pagination
-            small
-            layout="prev, pager, next"
-            :total="page">
-          </el-pagination>',
             data: function () {
                 return {
                     list: [],
                     page: {
                         current: 1,
-                        total: 10
+                        total: 34
                     }
                 }
             },
@@ -64,15 +57,11 @@ function step0 () {
     // const bro = document.querySelector('section')
     const bro = document.querySelector('body')
     const section = document.createElement('section')
+    section.innerHTML = `<el-button @click="xxx">Buttonx</el-button>
+    <el-dialog :visible.sync="visible" title="Hello world">
+      <p>Try Element</p>
+    </el-dialog>    `
     section.id = 'upload-mode-btn'
-    // const script = document.createElement('script')
-    // script.id = 'upload-mode-btn-script'
-    // script.innerHTML = `<el-button @click="visible = true">Button</el-button>
-    // <el-dialog :visible.sync="visible" title="Hello world">
-    //   <p>Try Element</p>
-    // </el-dialog>`
-    // script.type = 'x-template'
-    // bro.appendChild(script)
     bro.appendChild(section)
 }
 
@@ -81,6 +70,11 @@ function step1 () {
     const bro = document.querySelector('body')
     const section = document.createElement('section')
     section.id = 'upload-mode-page'
+    section.innerHTML = `<el-pagination
+    small
+    layout="prev, pager, next"
+    :total="page.total">
+  </el-pagination>`
     bro.parentElement.appendChild(section)
 }
 
