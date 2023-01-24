@@ -1,17 +1,14 @@
-/* 微信：angewechat; like , i love you ; 2023-01-23 周一 */
+/* 微信：angewechat; like , i love you ; 2023-01-24 周二 */
 
 function init () {
     // 添加元素 - 按钮
-    step0()
-    // 添加元素 - 新列表
-    step1()
+    addJumpBtn()
     // 添加脚手架
-    step2()
+    addTool()
     // 视图渲染
     setTimeout(() => {
-        step3()
+        initVue()
     }, 5 * 1000);
-
 }
 
 init()
@@ -21,65 +18,72 @@ init()
 function vueOptions () {
     const options = [
         `{
-            el: '#upload-mode-btn',
+            el: '#pyz-btn',
             data: function () {
                 return {
-                    visible: false
+                    pages: [],
+                    oldLi: {},
+                    paths: []
                 }
             },
             methods: {
-                xxx: function() {
-                    this.visible = true
+                jumpNext: function () {
+                    this.paths = []
+                    this.pages = document.querySelector('.el-pager').children
+                    this.oldLi = document.querySelector('.el-pager .active')
+                    this.setPaths(this.oldLi)
+                    this.oldLi.click()
+                    setTimeout(() => {
+                        const infos = []
+                        for (let index = 0; index < this.paths.length; index++) {
+                            const element = this.paths[index];
+                            infos.push(element.link.split('com')[1])
+                        }
+                        const url = 'https://panyanzhi.github.io/page/#/ke?paths=' + infos.join(',')
+                        window.open(url, '_self')
+                    }, 6 * 1000);
+                },
+                setPaths: function (li, maxCount = 30) {
+                    li.click()
+                    setTimeout(() => {
+                        const rows = document.querySelectorAll('.el-table__row')
+                        const page = parseInt(li.textContent)
+                        for (let rIndex = 0; rIndex < rows.length; rIndex++) {
+                            const row = rows[rIndex];
+                            const cols = row.children
+                            // const text = cols[0].textContent
+                            const link = cols[2].innerHTML.match(/href="(.*?)"/)[1]
+                            if (this.paths.find(item => item.link === link)) {
+                                continue
+                            }
+                            if (paths.length < maxCount) {
+                                this.paths.push({ page, link })
+                            } else {
+                                break
+                            }
+                        }
+                        if (this.paths.length < maxCount) {
+                            this.setPaths(this.pages[page])
+                        }
+                    }, 2 * 1000);
                 }
-            }
-        }`,
-        `{
-            el: '#upload-mode-page',
-            data: function () {
-                return {
-                    list: [],
-                    page: {
-                        current: 1,
-                        total: 34
-                    }
-                }
-            },
-            methods: {
-
             }
         }`
     ]
     return options
 }
 
-// 模式切换按钮
-function step0 () {
-    // const bro = document.querySelector('section')
-    const bro = document.querySelector('body')
-    const section = document.createElement('section')
-    section.innerHTML = `<el-button @click="xxx">Buttonx</el-button>
-    <el-dialog :visible.sync="visible" title="Hello world">
-      <p>Try Element</p>
-    </el-dialog>    `
-    section.id = 'upload-mode-btn'
-    bro.appendChild(section)
-}
-
-// 添加上传模式页面
-function step1 () {
-    const bro = document.querySelector('body')
-    const section = document.createElement('section')
-    section.id = 'upload-mode-page'
-    section.innerHTML = `<el-pagination
-    small
-    layout="prev, pager, next"
-    :total="page.total">
-  </el-pagination>`
-    bro.parentElement.appendChild(section)
+// 中间页按钮
+function addJumpBtn () {
+    const form = document.querySelector('.demo-form-inline')
+    const p = document.createElement('p')
+    p.innerHTML = `<el-button @click="jumpNext" size="mini">中间页</el-button>`
+    p.id = 'pyz-btn'
+    form.appendChild(section)
 }
 
 // 添加脚手架
-function step2 () {
+function addTool () {
     const tools = [
         {
             type: 'script',
@@ -118,7 +122,7 @@ function step2 () {
 }
 
 // vue渲染
-function step3 () {
+function initVue () {
     const options = vueOptions()
     for (let index = 0; index < options.length; index++) {
         const script = document.createElement('script')
@@ -126,4 +130,3 @@ function step3 () {
         document.head.appendChild(script)
     }
 }
-
