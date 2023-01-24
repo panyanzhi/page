@@ -1,16 +1,7 @@
 /* 微信：angewechat; like , i love you ; 2023-01-24 周二 */
 
 function init () {
-    if (confirm('攀岩志提示：需要花费6-8s加载辅助程序？\n点击确定开始加载')) {
-        // 添加元素 - 按钮
-        addJumpBtn()
-        // 添加脚手架
-        addTool()
-        // 视图渲染
-        setTimeout(() => {
-            initVue()
-        }, 7 * 1000);
-    }
+    initStyle()
 }
 
 init()
@@ -129,7 +120,6 @@ function addTool () {
             node.src = tool.url
         }
         document.head.appendChild(node)
-        console.log('add tool', node)
     }
 }
 
@@ -141,4 +131,11 @@ function initVue () {
         script.innerText = `new Vue(${options[index].replace(/[\r\n]/g, "")})` //.replace(/\s+/g, "")
         document.head.appendChild(script)
     }
+}
+
+// style
+function initStyle () {
+    const style = document.createElement('style')
+    style.innerText = `.el-upload-list--text{max-width:300px}`
+    document.head.appendChild(style)
 }
