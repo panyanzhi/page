@@ -19,7 +19,7 @@ init()
 
 function vueOptions () {
     const options = [
-        {
+        `{
             el: '#pyz-btn',
             data: function () {
                 return {
@@ -72,7 +72,7 @@ function vueOptions () {
                     }, 2 * 1000);
                 }
             }
-        }
+        }`
     ]
     return options
 }
