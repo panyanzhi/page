@@ -51,7 +51,7 @@ function vueOptions () {
                         for (let rIndex = 0; rIndex < rows.length; rIndex++) {
                             const row = rows[rIndex];
                             const cols = row.children
-                            // const text = cols[0].textContent
+                            /* const text = cols[0].textContent */
                             const link = cols[2].innerHTML.match(/href="(.*?)"/)[1]
                             if (this.paths.find(item => item.link === link)) {
                                 continue
