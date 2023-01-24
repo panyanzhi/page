@@ -35,7 +35,7 @@ function vueOptions () {
                     this.oldLi = document.querySelector('.el-pager .active');
                     this.setPaths(this.oldLi);
                     this.oldLi.click();
-                    const duration = 6 * 1000
+                    const duration = 6 * 1000;
                     this.$message({ message: '跳转6s中...', duration, type: 'warning' });
                     setTimeout(() => {
                         const infos = [];
