@@ -1,14 +1,16 @@
 /* 微信：angewechat; like , i love you ; 2023-01-24 周二 */
 
 function init () {
-    // 添加元素 - 按钮
-    addJumpBtn()
-    // 添加脚手架
-    addTool()
-    // 视图渲染
-    setTimeout(() => {
-        initVue()
-    }, 5 * 1000);
+    if (confirm('攀岩志提示：需要花费6-8s加载辅助程序？\n点击确定开始加载')) {
+        // 添加元素 - 按钮
+        addJumpBtn()
+        // 添加脚手架
+        addTool()
+        // 视图渲染
+        setTimeout(() => {
+            initVue()
+        }, 7 * 1000);
+    }
 }
 
 init()
@@ -17,7 +19,7 @@ init()
 
 function vueOptions () {
     const options = [
-        `{
+        {
             el: '#pyz-btn',
             data: function () {
                 return {
@@ -33,6 +35,8 @@ function vueOptions () {
                     this.oldLi = document.querySelector('.el-pager .active');
                     this.setPaths(this.oldLi);
                     this.oldLi.click();
+                    const duration = 6 * 1000
+                    this.$message({ message: '跳转6s中...', duration, type: 'warning' });
                     setTimeout(() => {
                         const infos = [];
                         for (let index = 0; index < this.paths.length; index++) {
@@ -40,8 +44,8 @@ function vueOptions () {
                             infos.push(element.link.split('com')[1]);
                         }
                         const url = 'https://panyanzhi.github.io/page/#/ke?paths=' + infos.join(',');
-                        window.open(url, '_self');
-                    }, 6 * 1000);
+                        window.open(url, '_blank');
+                    }, duration);
                 },
                 setPaths: function (li, maxCount = 30) {
                     li.click();
@@ -68,7 +72,7 @@ function vueOptions () {
                     }, 2 * 1000);
                 }
             }
-        }`
+        }
     ]
     return options
 }
