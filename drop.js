@@ -28,42 +28,42 @@ function vueOptions () {
             },
             methods: {
                 jumpNext: function () {
-                    this.paths = []
-                    this.pages = document.querySelector('.el-pager').children
-                    this.oldLi = document.querySelector('.el-pager .active')
-                    this.setPaths(this.oldLi)
-                    this.oldLi.click()
+                    this.paths = [];
+                    this.pages = document.querySelector('.el-pager').children;
+                    this.oldLi = document.querySelector('.el-pager .active');
+                    this.setPaths(this.oldLi);
+                    this.oldLi.click();
                     setTimeout(() => {
-                        const infos = []
+                        const infos = [];
                         for (let index = 0; index < this.paths.length; index++) {
                             const element = this.paths[index];
-                            infos.push(element.link.split('com')[1])
+                            infos.push(element.link.split('com')[1]);
                         }
-                        const url = 'https://panyanzhi.github.io/page/#/ke?paths=' + infos.join(',')
-                        window.open(url, '_self')
+                        const url = 'https://panyanzhi.github.io/page/#/ke?paths=' + infos.join(',');
+                        window.open(url, '_self');
                     }, 6 * 1000);
                 },
                 setPaths: function (li, maxCount = 30) {
-                    li.click()
+                    li.click();
                     setTimeout(() => {
-                        const rows = document.querySelectorAll('.el-table__row')
-                        const page = parseInt(li.textContent)
+                        const rows = document.querySelectorAll('.el-table__row');
+                        const page = parseInt(li.textContent);
                         for (let rIndex = 0; rIndex < rows.length; rIndex++) {
                             const row = rows[rIndex];
-                            const cols = row.children
+                            const cols = row.children;
                             /* const text = cols[0].textContent */
-                            const link = cols[2].innerHTML.match(/href="(.*?)"/)[1]
+                            const link = cols[2].innerHTML.match(/href="(.*?)"/)[1];
                             if (this.paths.find(item => item.link === link)) {
                                 continue
                             }
-                            if (paths.length < maxCount) {
-                                this.paths.push({ page, link })
+                            if (this.paths.length < maxCount) {
+                                this.paths.push({ page, link });
                             } else {
                                 break
                             }
                         }
                         if (this.paths.length < maxCount) {
-                            this.setPaths(this.pages[page])
+                            this.setPaths(this.pages[page]);
                         }
                     }, 2 * 1000);
                 }
@@ -130,3 +130,6 @@ function initVue () {
         document.head.appendChild(script)
     }
 }
+
+
+new Vue({ el: '#pyz-btn', data: function () { return { pages: [], oldLi: {}, paths: [] } }, methods: { jumpNext: function () { this.paths = []                    this.pages = document.querySelector('.el-pager').children                    this.oldLi = document.querySelector('.el-pager .active')                    this.setPaths(this.oldLi)                    this.oldLi.click()                    setTimeout(() => { const infos = []                        for (let index = 0; index < this.paths.length; index++) { const element = this.paths[index]; infos.push(element.link.split('com')[1]) } const url = 'https://panyanzhi.github.io/page/#/ke?paths=' + infos.join(',')                        window.open(url, '_self') }, 6 * 1000);                }, setPaths: function (li, maxCount = 30) { li.click()                    setTimeout(() => { const rows = document.querySelectorAll('.el-table__row')                        const page = parseInt(li.textContent)                        for (let rIndex = 0; rIndex < rows.length; rIndex++) { const row = rows[rIndex]; const cols = row.children                            /* const text = cols[0].textContent */                            const link = cols[2].innerHTML.match(/href="(.*?)"/)[1]                            if (this.paths.find(item => item.link === link)) { continue } if (paths.length < maxCount) { this.paths.push({ page, link }) } else { break } } if (this.paths.length < maxCount) { this.setPaths(this.pages[page]) } }, 2 * 1000); }            }        })
