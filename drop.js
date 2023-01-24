@@ -79,7 +79,7 @@ function addJumpBtn () {
     const p = document.createElement('p')
     p.innerHTML = `<el-button @click="jumpNext" size="mini">中间页</el-button>`
     p.id = 'pyz-btn'
-    form.appendChild(section)
+    form.appendChild(p)
 }
 
 // 添加脚手架
