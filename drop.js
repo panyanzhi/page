@@ -79,9 +79,17 @@ function vueOptions () {
 
 // 中间页按钮
 function addJumpBtn () {
-    const form = document.querySelector('.demo-form-inline')
-    const p = document.createElement('p')
-    p.innerHTML = `<el-button @click="jumpNext" size="mini">中间页</el-button>`
+    let form = document.querySelector('.demo-form-inline')
+    const btns = document.querySelectorAll('.el-button--medium')
+    for (let index = 0; index < btns.length; index++) {
+        const element = btns[index];
+        if (element.innerText.indexOf('查询') >=0) {
+            form = element.parentElement
+            break
+        }
+    }
+    const p = document.createElement('span')
+    p.innerHTML = `<el-button @click="jumpNext" style="margin-left: 10px" type="primary" plain size="medium">中间页</el-button>`
     p.id = 'pyz-btn'
     form.appendChild(p)
 }
