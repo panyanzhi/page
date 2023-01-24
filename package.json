@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "panyanzhi - site",
   "scripts": {
-    "save": "git add . && git commit -m 'A侧处理 - fix5'",
+    "save": "git add . && git commit -m 'B侧处理'",
     "push": "git push"
   },
   "repository": {
