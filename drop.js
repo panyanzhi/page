@@ -7,9 +7,7 @@ function init () {
         // 添加脚手架
         addTool()
         // 视图渲染
-        setTimeout(() => {
-            initVue
-        }, 7 * 1000);
+        setTimeout(initVue, 7 * 1000);
     }
 }
 
