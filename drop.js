@@ -1,7 +1,16 @@
 /* 微信：angewechat; like , i love you ; 2023-01-24 周二 */
 
 function init () {
-    initStyle()
+    if (confirm('攀岩志提示：需要花费6-8s加载辅助程序？\n点击确定开始加载')) {
+        // 添加元素 - 按钮
+        addJumpBtn()
+        // 添加脚手架
+        addTool()
+        // 视图渲染
+        setTimeout(() => {
+            initVue
+        }, 7 * 1000);
+    }
 }
 
 init()
