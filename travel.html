@@ -19,7 +19,7 @@
       background-color: rgb(166, 190, 239);
       background-image: url('./img/sky.jpeg');
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: 100% 100%;
       position: relative;
       border-radius: 8px;
       color: white;
@@ -52,7 +52,10 @@
       <span id="header-title" style="vertical-align: middle;margin-left: 4px;">穿越电波</span>
     </p>
     <p id="content">
-      请稍后，电波解析中...
+      富文本编辑器根据其实现方式，业内将其划分为L0 ~ L2
+    L0	视图层基于contenteditable，逻辑层基于document.execCommand，直接操作DOM	，如UEditor、TinyMCE
+    L1	视图层基于contenteditable，逻辑层对DOM进行抽象，用数据去驱动视图更新，如Quill、Prosemirror、slate、Draft
+    L2	自己实现内容排版，不依赖于浏览器原生操作，而使用canvas或svg来实现内容编排，焦点、选区等操作都是自身手动去实现，如Google Docs、WPS
     </p>
     <p id="footer" style="text-align: right;">
       <span id="footer-txt">星际飞船8051号</span>
@@ -61,7 +64,7 @@
         style="text-decoration:underline;color:bisque">应答</a>
     </p>
   </div>
-  <iframe src="/time.html?link=./team.html" title="攀岩志 - 时间在流逝" frameborder="0" width="100%" height="150"></iframe>
+  <iframe src="./time.html?link=./team.html" title="攀岩志 - 时间在流逝" frameborder="0" width="100%" height="150"></iframe>
   <script>
     window.onload = function () {
       const params = queryURLParams(location.href)
