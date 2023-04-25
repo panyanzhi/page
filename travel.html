@@ -9,10 +9,17 @@
   <link rel="stylesheet" href="./reset.css" type="text/css" />
   <title>攀岩志 - 穿越电波</title>
   <style>
+    body {
+      background-color: #f1f1f1;
+    }
+
     .pyz-card {
       margin: 50px auto;
       width: 90%;
       background-color: rgb(166, 190, 239);
+      background-image: url('./img/sky.jpeg');
+      background-repeat: no-repeat;
+      background-size: 100%;
       position: relative;
       border-radius: 8px;
       color: white;
@@ -54,15 +61,11 @@
         style="text-decoration:underline;color:bisque">应答</a>
     </p>
   </div>
-  <iframe src="./time.html?link=./team.html" title="攀岩志 - 时间在流逝" frameborder="0" width="100%" height="150"></iframe>
+  <iframe src="/time.html?link=./team.html" title="攀岩志 - 时间在流逝" frameborder="0" width="100%" height="150"></iframe>
   <script>
     window.onload = function () {
       const params = queryURLParams(location.href)
-      try {
-        laodData(params.id).then(setDianbo)
-      } catch (error) {
-        console.debug(error)
-      }
+      laodData(params.id).then(setDianbo)
     }
 
     function setDianbo (resp) {
@@ -84,7 +87,7 @@
             resolve(window.dianbo)
           }
         } else {
-          resolve({ content: '解析失败，电波文件不存在', date: '2023/04/15 11:17:07', where: '星际飞船8051号' })
+          resolve({code: 404,  content: '解析失败，电波文件不存在', date: '2023/04/15 11:17:07', where: '星际飞船8051号' })
         }
       })
     }
