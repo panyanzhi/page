@@ -48,7 +48,7 @@
 <body>
   <div class="pyz-card">
     <p class="header">
-      <img src="./fengjing.png" width="32" />
+      <img src="./img/fengjing.png" width="32" />
       <span id="header-title" style="vertical-align: middle;margin-left: 4px;">穿越电波</span>
     </p>
     <p id="content">
@@ -87,7 +87,7 @@
             resolve(window.dianbo)
           }
         } else {
-          resolve({code: 404,  content: '解析失败，电波文件不存在', date: '2023/04/15 11:17:07', where: '星际飞船8051号' })
+          resolve({ code: 404, content: '解析失败，电波文件不存在', date: Date.now(), where: '星际飞船8051号' })
         }
       })
     }
