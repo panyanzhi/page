@@ -65,6 +65,9 @@
   <script>
     window.onload = function () {
       const params = queryURLParams(location.href)
+      if (params.id) {
+        document.getElementById("header-title").innerHTML = '穿越电波 · 编号' + parseInt(params.id, 2)
+      }
       laodData(params.id).then(setDianbo)
     }
 
