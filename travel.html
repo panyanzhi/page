@@ -126,9 +126,7 @@
           }
         })
       } else {
-        return new Promise((resolve, reject) => {
-          resolve({ code: 404, content: '解析失败，电波文件不存在', date: Date.now(), where: '穿越之门8051' })
-        })
+        return laodData(404, params)
       }
     }
 
