@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="./vue/favicon.ico">
   <link rel="stylesheet" href="./reset.css" type="text/css" />
   <title>攀岩志 - 穿越电波</title>
+  <meta name="Keywords" content="攀岩志,团队,开发,热爱,软件,创业,业余,设计,时间,开发,app,小程序,erp系统,oa系统,客户端,网站">
+  <meta name="Description" content="攀岩志(团队)由一群热爱开发的小伙伴组队而成，愿意利用业余时间承接些软件开发的项目工程，以此助力广大有志者使用软件的形式来管理或推广自己公司产品与业务。">
   <style>
     body {
       background-color: #f1f1f1;
@@ -65,10 +67,22 @@
   <script>
     window.onload = function () {
       const params = queryURLParams(location.href)
-      if (params.id) {
-        document.getElementById("header-title").innerHTML = '穿越电波 · 编号' + parseInt(params.id, 2)
+      const header = document.getElementById("header-title")
+      if (params.type) {
+        const dict = {
+          travel: '穿越电波',
+          vip: '专属电波',
+          work: '工作电波',
+          like: '爱情电波',
+        }
+        header.textContent = dict[params.type] ? dict[params.type] : '未知电波'
       }
-      laodData(params.id).then(setDianbo)
+      if (params.id) {
+        const dataId = parseInt(params.id, 2)
+        header.textContent = header.textContent + ' · 编号' + dataId
+        const fileId = params.type + dataId
+        laodData(fileId).then(setDianbo)
+      }
     }
 
     function setDianbo (resp) {
@@ -78,11 +92,11 @@
       document.getElementById("footer-txt").innerHTML = footerTxt
     }
 
-    function laodData (id) {
+    function laodData (fileId) {
       var head = document.getElementsByTagName('head')[0];
       var script = document.createElement('script');
       script.type = 'text/javascript';
-      script.src = './data/' + parseInt(id, 2) + '.js';
+      script.src = './data/' + fileId + '.js';
       return new Promise((resolve, reject) => {
         if (UrlExists(script.src)) {
           head.appendChild(script);
@@ -108,6 +122,9 @@
     }
 
     function UrlExists (url) {
+      if (location.origin === 'file://') {
+        return true
+      }
       var http = new XMLHttpRequest();
       http.open('HEAD', url, false);
       http.send();
