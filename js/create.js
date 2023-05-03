@@ -1,11 +1,11 @@
-// 导入fs模块
+// 数据导入
 const fs = require('fs')
 
 const getRandomPlace = require ('./where')
 
-const lines = `部门16字方针：用户至上、勇于担当、协作奋斗、敢为人先；开发24字方针：熟读需求文档，少许沟通确认，加强架构设计，开心快乐编码`
+const lines = ``
 
-const linelist = lines.split('\n\n')
+const linelist = lines.split('\n')
 const list = []
 for (let index = 0; index < linelist.length; index++) {
   const element = linelist[index];
@@ -13,7 +13,7 @@ for (let index = 0; index < linelist.length; index++) {
     {
       content: element,
       date: '2023/05/03 11:17:07',
-      where: '研发三部',
+      where: getRandomPlace(),
       type: 'work'
     }
   )

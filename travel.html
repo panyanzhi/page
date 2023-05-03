@@ -72,7 +72,7 @@
         style="text-decoration:underline;color:bisque">应答</a>
     </p>
   </div>
-  <iframe src="./time.html?link=./index.html" title="攀岩志 - 时间在流逝" frameborder="0" width="100%" height="150"></iframe>
+  <iframe id="timeLink" src="./time.html" title="攀岩志 - 时间在流逝" frameborder="0" width="100%" height="150"></iframe>
   <script>
     window.onload = function () {
       const params = queryURLParams(location.href)
@@ -88,12 +88,14 @@
       } else {
         params.type = 'travel'
       }
-      if (params.id) {
-        const dataId = parseInt(params.id, 2)
-        header.textContent = header.textContent + ' · 编号' + dataId
-        const fileId = params.type + dataId
-        laodData(fileId).then(setDianbo)
+      if (params.type === 'travel' || params.type === 'vip') {
+        const link = document.getElementById("timeLink")
+        link.src = './time.html?link=./index.html'
       }
+      const dataId = parseInt(params.id, 2)
+      header.textContent = header.textContent + ' · 编号' + dataId
+      const fileId = params.type + dataId
+      laodData(fileId).then(setDianbo)
     }
 
     function setDianbo (resp) {
