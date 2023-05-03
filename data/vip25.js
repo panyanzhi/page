@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我的生活因你而更加多姿多彩，因你而更加幸福快乐。',date:'2023/05/03 11:17:07',where:'波罗浮屠'}})()
