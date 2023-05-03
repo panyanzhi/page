@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'后是说谎话，',date:'2023/03/03 11:17:07',where:'奥地利盔甲博物馆'}})()

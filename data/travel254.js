@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'当时尚改变后，',date:'2023/03/03 11:17:07',where:'美国布希公园'}})()

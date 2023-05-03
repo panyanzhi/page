@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'《英雄联盟》（League of Legends，简称LOL）是由美国拳头游戏（Riot Games）开发、中国内地由腾讯游戏代理运营的英雄对战MOBA竞技网游。',date:'2023/05/03 11:17:07',where:'哈尔斯塔特'}})()

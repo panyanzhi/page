@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'网络的东西层次性是很强的，上层基于下层，servlet基于tomcat运行，tomcat基于HTTP协议进行通信，HTTP基于TCP实现，而TCP通信则是通过调用系统提供的socket函数进行，TCP是协议，socket则是实现这个协议的协议栈。',date:'2023/05/03 11:17:07',where:'月球'}})()

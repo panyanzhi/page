@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'一个人最大的成熟，是克制自己的优越感。',date:'2023/05/03 11:17:07',where:'普吉岛'}})()

@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'DOM和JavaScript语言是2个单独的东西，浏览器事件是DOM API的一部分，而不是JavaScript的一部分。',date:'2023/05/03 11:17:07',where:'巴厘岛'}})()

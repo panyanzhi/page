@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'她是怎样自我安慰的，',date:'2023/03/03 11:17:07',where:'卡奔塔利湾'}})()

@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'zoom的缩放改变了元素占据的空间大小；而scale的缩放占据的原始尺寸不变，页面布局不会发生变化；',date:'2023/05/03 11:17:07',where:'沃斯托克湖'}})()

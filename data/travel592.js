@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'回顾 Brad Cox 的一生，最为重要的成就应该是与 Tom Love 一起创建了 Objective–C。',date:'2023/05/03 11:17:07',where:'科塔华西峡谷'}})()

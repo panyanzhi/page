@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'青山一道同云雨，明月何曾是两乡。',date:'2023/05/03 11:17:07',where:'阿拉斯加湾'}})()

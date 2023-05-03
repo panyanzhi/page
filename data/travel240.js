@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'告诉我你永远都是诚实的，',date:'2023/03/03 11:17:07',where:'夏威夷群岛'}})()

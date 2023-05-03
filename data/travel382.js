@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'《绝地求生》(PUBG) 是由韩国Krafton工作室开发的一款战术竞技型射击类沙盒游戏。',date:'2023/05/03 11:17:07',where:'塔希提岛'}})()

@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'像阳光一样为我照耀，',date:'2023/03/03 11:17:07',where:'克内尔湖'}})()

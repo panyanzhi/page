@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'而且是无任何缘由地迷失；',date:'2023/03/03 11:17:07',where:'里海'}})()

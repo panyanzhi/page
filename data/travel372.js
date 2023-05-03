@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'迷信好评，加速着互联网平台评价体系走向崩塌。',date:'2023/05/03 11:17:07',where:'隆达'}})()

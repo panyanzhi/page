@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'iPad Air（第 3 代及后续机型）',date:'2023/03/03 11:17:07',where:'马拉维湖'}})()

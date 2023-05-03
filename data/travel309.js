@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'IAM（Identity and Access Management 的缩写），即“身份识别与访问管理”，具有单点登录、强大的认证管理、基于策略的集中式授权和审计、动态授权、企业可管理性等功能。',date:'2023/05/03 11:17:07',where:'泰国苏梅岛上芒库莱潘酒店'}})()

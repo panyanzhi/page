@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'Git 提供了两种补丁方案，一是用git diff生成的UNIX标准补丁.diff文件，二是git format-patch生成的Git专用.patch 文件。.diff文件只是记录文件改变的内容，不带有commit记录信息,多个commit可以合并成一个diff文件。.patch文件带有记录文件改变的内容，也带有commit记录信息,每个commit对应一个patch文件。',date:'2023/05/03 11:17:07',where:'贝加尔湖'}})()

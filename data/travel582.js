@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我的编程吐槽：如果不是看源码，这种 var o = Object(this) var k = o.length >>> 0 高级的用法，也许永远不会被我写出来。还是差的远啊。。继续努力吧。',date:'2023/05/03 11:17:07',where:'美国大峡谷'}})()

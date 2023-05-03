@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'谨言慎行永远是职场第一法则',date:'2023/05/03 11:17:07',where:'罗马'}})()

@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'一个axios实例上有两个拦截器，一个是请求拦截器， 然后响应拦截器。',date:'2023/05/03 11:17:07',where:'鄂毕河'}})()

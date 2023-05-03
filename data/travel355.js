@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'Raspberry Pi(中文名为“树莓派”,简写为RPi，(或者RasPi / RPI) [1]  是为学习计算机编程教育而设计)，只有信用卡大小的微型电脑，其系统基于Linux。 [2]  随着Windows 10 IoT的发布，我们也将可以用上运行Windows的树莓派。 [3] ',date:'2023/05/03 11:17:07',where:'海王星'}})()

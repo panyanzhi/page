@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'懂的人自然会懂，面对不懂的人，要学会沉默。',date:'2023/05/03 11:17:07',where:'长江'}})()

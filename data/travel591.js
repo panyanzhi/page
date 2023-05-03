@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'WebRTC 由用于 Web 实时通信的 JavaScript API 和一组通信协议构成，支持网络上的任何已连接设备成为 Web 上潜在的通信端点。WebRTC 已成为线上通信及协作服务的基石。',date:'2023/05/03 11:17:07',where:'东非大峡谷'}})()

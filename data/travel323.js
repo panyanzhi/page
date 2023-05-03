@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'要么沉醉于悲伤中',date:'2023/05/03 11:17:07',where:'尼泊尔的卡利甘达基峡谷'}})()

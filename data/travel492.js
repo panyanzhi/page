@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我无须移动即可看到一切：',date:'2023/05/03 11:17:07',where:'鲁卜哈利沙漠'}})()

@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'SUM：结构化用户管理 SSM：自助服务管理 MDM：主数据管理 OA：用户中心',date:'2023/03/03 11:17:07',where:'暹罗湾'}})()

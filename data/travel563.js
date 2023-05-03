@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'',date:'2023/05/03 11:17:07',where:'澳大利亚的Capertee峡谷'}})()

@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'Amazon Sumerian 编辑器则提供了现成的场景模板和直观的拖放工具，使内容创建者、设计师和开发人员都可以构建交互式场景。Amazon Sumerian 采用最新的 WebGL 和 WebXR 标准，可直接在 Web 浏览器中创建沉浸式体验，并可通过简单的 URL 在几秒钟内进行访问，同时能够在适用于 AR/VR 的主要硬件平台上运行。',date:'2023/05/03 11:17:07',where:'雅鲁藏布江大峡谷'}})()

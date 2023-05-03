@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:' 回忆就像石头放在口袋里，时刻提醒你它的沉甸甸又不至于负重难行。',date:'2023/05/03 11:17:07',where:'澳大利亚的Capertee峡谷'}})()

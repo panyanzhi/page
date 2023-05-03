@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'跟Java、Python和PHP这样所谓的开源语言不同，C语言与C++没有官方提供的各自确切的实现代码（库），ISO/ANSI仅仅提供了C和C++的标准。',date:'2023/05/03 11:17:07',where:'邦迪海滩'}})()

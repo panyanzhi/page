@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'2019年9月，彭迦信在行业会议Music Matters上表示，之后TME将实施以内容（Content）、技术(Technology)、服务(Service)为核心的CTS战略。简而言之，在内容方面，要对内容重新定义，长短视频、音乐节目、直播均为音乐内容；在技术方面，要用AI提升曲库利用效率；服务方面，将渗透更多使用场景。',date:'2023/05/03 11:17:07',where:'华卡齐纳绿洲'}})()

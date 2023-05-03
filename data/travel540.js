@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'Proxy 不兼容IE，也没有 polyfill, defineProperty 能支持到IE9',date:'2023/05/03 11:17:07',where:'艾恩戈迪绿洲'}})()

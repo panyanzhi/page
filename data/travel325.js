@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'要么笑着搪塞过去',date:'2023/05/03 11:17:07',where:'周庄'}})()

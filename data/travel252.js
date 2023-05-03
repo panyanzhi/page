@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'你知道吗？人是疯狂的，',date:'2023/03/03 11:17:07',where:'英国奥尔顿塔'}})()

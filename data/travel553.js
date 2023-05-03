@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'prototype是函数才有的属性，切记，切记。__proto__是每个对象都有的属性。',date:'2023/05/03 11:17:07',where:'伊瓜苏瀑布'}})()

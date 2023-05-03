@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'usb-c接口和type-c接口没有区别。type-c接口和usb-c接口其实是一个东西，USB-C接口全称为USB Type-C；USB-C接口具有超薄、不分正反面、传输速度快等特点。',date:'2023/03/03 11:17:07',where:'巴音布鲁克草原'}})()

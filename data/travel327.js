@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'不论走哪条路',date:'2023/05/03 11:17:07',where:'希腊爱琴岛'}})()

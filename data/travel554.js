@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'由于所有的实例对象共享同一个prototype对象，那么从外界看起来，prototype对象就好像是实例对象的原型，而实例对象则好像'继承'了prototype对象一样。',date:'2023/05/03 11:17:07',where:'那拉提草原'}})()
