@@ -85,6 +85,8 @@
           like: '爱情电波',
         }
         header.textContent = dict[params.type] ? dict[params.type] : '未知电波'
+      } else {
+        params.type = 'travel'
       }
       if (params.id) {
         const dataId = parseInt(params.id, 2)
