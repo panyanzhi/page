@@ -93,8 +93,11 @@
         link.src = './time.html?link=./index.html'
       }
       const dataId = parseInt(params.id, 2)
+      let fileId = '500'
+      if (isNaN(dataId) === false) {
+        fileId = params.type + dataId
+      }
       header.textContent = header.textContent + ' · 编号' + dataId
-      const fileId = params.type + dataId
       laodData(fileId, params).then(setDianbo)
     }
 
