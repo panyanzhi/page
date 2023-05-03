@@ -95,7 +95,7 @@
       const dataId = parseInt(params.id, 2)
       header.textContent = header.textContent + ' · 编号' + dataId
       const fileId = params.type + dataId
-      laodData(fileId).then(setDianbo)
+      laodData(fileId, params).then(setDianbo)
     }
 
     function setDianbo (resp) {
@@ -105,7 +105,7 @@
       document.getElementById("footer-txt").innerHTML = footerTxt
     }
 
-    function laodData (fileId) {
+    function laodData (fileId, params) {
       const path = './data/' + fileId + '.js'
       if (UrlExists(path)) {
         var head = document.getElementsByTagName('head')[0];
@@ -115,7 +115,11 @@
         return new Promise((resolve, reject) => {
           head.appendChild(script);
           script.onload = function () {
-            resolve(window.dianbo)
+            const resp = window.dianbo
+            resp.content = params.content || resp.content
+            resp.date = params.date || resp.date
+            resp.where = params.where || resp.where
+            resolve(resp)
           }
         })
       } else {
