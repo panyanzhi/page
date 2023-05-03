@@ -96,7 +96,6 @@
       let fileId = '500'
       if (isNaN(dataId) === false) {
         fileId = params.type + dataId
-      } else {
         header.textContent = header.textContent + ' · 编号' + dataId
       }
       laodData(fileId, params).then(setDianbo)
