@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'愿最美好的事物属于我们每一个人。',date:'2023/05/03 11:17:07',where:'尼亚加拉瀑布'}})()

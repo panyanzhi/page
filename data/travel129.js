@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'每个纪念日都是值得铭记和怀念的。',date:'2023/05/03 11:17:07',where:'贝加尔湖'}})()

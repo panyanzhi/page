@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'爱情，就是在彼此的生命中，留下一段绝美的故事。',date:'2023/05/03 11:17:07',where:'特内里费岛'}})()

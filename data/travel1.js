@@ -1,7 +1,1 @@
-(function(){
-  window.dianbo = {
-    content: '抱歉，穿越之门8051正在检修中，稍安勿躁...',
-    date: '2023/04/15 11:17:07',
-    where: '值守机器人'
-  }
-})()
+(function(){window.dianbo = {content:'我们在喧闹的人群中相遇了。',date:'2023/05/03 11:17:07',where:'卡奔塔利湾'}})()

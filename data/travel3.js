@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我们第一次相遇是在那个繁华的城市里。',date:'2023/05/03 11:17:07',where:'天王星'}})()

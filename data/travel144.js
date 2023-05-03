@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'愿望是一盏灯，我们可以根据它的指引前进。',date:'2023/05/03 11:17:07',where:'大新德天跨国瀑布'}})()

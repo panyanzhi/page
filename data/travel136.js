@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'宇宙中无尽星河，正等待着我们去编织新的故事。',date:'2023/05/03 11:17:07',where:'香港'}})()

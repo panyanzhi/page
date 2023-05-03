@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我们相遇于时间的流转，却注定要永不分离。',date:'2023/05/03 11:17:07',where:'甘南大草原'}})()

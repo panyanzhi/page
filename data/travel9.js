@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'一场偶然的邂逅，将我们的缘分牢牢地捆绑在了一起。',date:'2023/05/03 11:17:07',where:'太阳'}})()

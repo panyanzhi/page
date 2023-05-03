@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我们彼此穿越了岁月和星河，终于在这个时刻相遇。',date:'2023/05/03 11:17:07',where:'湄公河'}})()

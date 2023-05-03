@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'每一次相遇，我们都能够获取到成长起来的力量。',date:'2023/05/03 11:17:07',where:'珠穆朗玛峰'}})()

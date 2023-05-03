@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我们的相遇，注定是宇宙最美的一道风景。',date:'2023/05/03 11:17:07',where:'羊角村'}})()

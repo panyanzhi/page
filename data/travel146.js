@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'对自己要有信心，尽管周围的人都不看好你。',date:'2023/05/03 11:17:07',where:'邦迪海滩'}})()

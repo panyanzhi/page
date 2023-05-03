@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'真正的美好，是需要通过奋斗和争取得来的。',date:'2023/05/03 11:17:07',where:'巴音布鲁克草原'}})()

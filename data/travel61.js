@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我们相识于某个瞬间，注定要一起颠覆宇宙的秩序。',date:'2023/05/03 11:17:07',where:'夏威夷群岛'}})()

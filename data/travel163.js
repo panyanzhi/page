@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'相遇是一种缘，却是一份经营。',date:'2023/05/03 11:17:07',where:'特内里费岛'}})()

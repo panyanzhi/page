@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我们相识于某个季节，遇见了那个独一无二的你。',date:'2023/05/03 11:17:07',where:'日本富士山'}})()

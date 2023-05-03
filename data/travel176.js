@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'爱情是柔软的灯光，温暖并辉映着彼此的一切。',date:'2023/05/03 11:17:07',where:'密西西比河'}})()

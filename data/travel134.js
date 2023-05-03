@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'相知，需要耐心和真诚，但也需要摆脱偏见。',date:'2023/05/03 11:17:07',where:'卡奔塔利湾'}})()

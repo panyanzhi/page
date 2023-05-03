@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'在这无尽的宇宙之中， 我正在寻找我的那颗星星。',date:'2023/05/03 11:17:07',where:'波西塔诺'}})()
