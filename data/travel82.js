@@ -1,1 +1,1 @@
-(function(){window.dianbo = {content:'8我们经历了悲欢离合，才在这个地球上相遇，发现了彼此。',date:'2023/05/03 11:17:07',where:'波罗浮屠'}})()
+(function(){window.dianbo = {content:'我们经历了悲欢离合，才在这个地球上相遇，发现了彼此。',date:'2023/05/03 11:17:07',where:'波罗浮屠'}})()

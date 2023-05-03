@@ -1,1 +1,1 @@
-(function(){window.dianbo = {content:'8我们在宇宙的边缘相遇，然后相拥在彼此的怀中，永不离开。',date:'2023/05/03 11:17:07',where:'皇后镇'}})()
+(function(){window.dianbo = {content:'我们在宇宙的边缘相遇，然后相拥在彼此的怀中，永不离开。',date:'2023/05/03 11:17:07',where:'皇后镇'}})()

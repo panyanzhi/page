@@ -99,26 +99,26 @@
     function setDianbo (resp) {
       document.getElementById("content").innerHTML = resp.content
       const when = timeago(resp.date)
-      console.log(resp.date)
       const footerTxt = `${when.indexOf('NaN') === -1 ? when : '未知时间'}来自“${resp.where ? resp.where : '一道风景'}”的电波`
       document.getElementById("footer-txt").innerHTML = footerTxt
     }
 
     function laodData (fileId) {
-      var head = document.getElementsByTagName('head')[0];
-      var script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = './data/' + fileId + '.js';
-      return new Promise((resolve, reject) => {
-        if (UrlExists(script.src)) {
+      const path = './data/' + fileId + '.js'
+      if (UrlExists(path)) {
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = path;
+        return new Promise((resolve, reject) => {
           head.appendChild(script);
           script.onload = function () {
             resolve(window.dianbo)
           }
-        } else {
-          resolve({ code: 404, content: '解析失败，电波文件不存在', date: Date.now(), where: '穿越之门8051' })
-        }
-      })
+        })
+      } else {
+        resolve({ code: 404, content: '解析失败，电波文件不存在', date: Date.now(), where: '穿越之门8051' })
+      }
     }
 
     function queryURLParams (url) {
