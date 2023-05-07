@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'生命中最美好的时光总是那些你与我缺席的时间。',date:'2023/05/03 11:17:07',where:'阿拉斯加湾'}})()

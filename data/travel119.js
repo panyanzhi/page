@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我们不是巧合相遇，而是注定相识。',date:'2023/05/03 11:17:07',where:'冈底斯山脉'}})()

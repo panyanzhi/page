@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'We can do anything, everyday we'll ride some place new. 别怕！我能陪你做任何事，去任何地方。',date:'2023/05/03 11:17:07',where:'虎穴寺'}})()

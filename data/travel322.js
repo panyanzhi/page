@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'要么伤心的长吁短叹',date:'2023/05/03 11:17:07',where:'印度阿曼度假村'}})()

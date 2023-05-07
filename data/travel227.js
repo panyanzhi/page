@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'集成开发环境（IDE，Integrated Development Environment ）是用于提供程序开发环境的应用程序，一般包括代码编辑器、编译器、调试器和图形用户界面等工具。集成了代码编写功能、分析功能、编译功能、调试功能等一体化的开发软件服务套。',date:'2023/03/03 11:17:07',where:'瑞士威尔逊总统酒店'}})()

@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'做最好的自己，才是最重要的事情。',date:'2023/05/03 11:17:07',where:'斐济库塞斯特度假村'}})()

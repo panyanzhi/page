@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'第二次，当它在空虚时，用爱欲来填充；',date:'2023/03/03 11:17:07',where:'日本别府温泉'}})()

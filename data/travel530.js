@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'万全的准备是胜利的开始',date:'2023/05/03 11:17:07',where:'美国大雾山国家公园'}})()

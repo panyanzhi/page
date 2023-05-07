@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'本来各自闯荡天涯，只为相遇、相知、相爱。',date:'2023/05/03 11:17:07',where:'艾尔哈撒绿洲'}})()

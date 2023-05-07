@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我会永远把你照顾好，我会永远爱你。',date:'2023/05/03 11:17:07',where:'清菜灵光寺'}})()

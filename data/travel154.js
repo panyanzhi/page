@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'对于我来说，你就是人生中最美好的那一页。',date:'2023/05/03 11:17:07',where:'马尔特诺玛瀑布'}})()

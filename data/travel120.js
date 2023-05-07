@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'穿越时空，我们终于相遇在这里。',date:'2023/05/03 11:17:07',where:'北京'}})()

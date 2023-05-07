@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我们在喧闹的人群中相遇了。',date:'2023/05/03 11:17:07',where:'卡奔塔利湾'}})()

@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我们不期而遇，在空气中弥漫着甜蜜的气息。',date:'2023/05/03 11:17:07',where:'鱼河大峡谷'}})()

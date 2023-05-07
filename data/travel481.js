@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'“最近有一个趋势是将JavaScript放在HTML文档结尾处的</body>标签里，这样就可以确保在JavaScript运行时整个页面已经加载完毕”。',date:'2023/05/03 11:17:07',where:'卡拉哈里沙漠'}})()

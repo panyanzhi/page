@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'你就是那颗星星，在我的生命中闪耀着光芒。',date:'2023/05/03 11:17:07',where:'大新德天跨国瀑布'}})()

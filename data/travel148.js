@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'友情是一份长久的情谊，需要常常维护。',date:'2023/05/03 11:17:07',where:'呼伦贝尔大草原'}})()

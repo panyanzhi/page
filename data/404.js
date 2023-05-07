@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'抱歉，解析失败，电波文件不合法!',date:Date.now(),where:'值守机器人'}})()

@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'只有无所事事的人才会觉得孤单。',date:'2023/03/03 11:17:07',where:'马尔代夫群岛'}})()

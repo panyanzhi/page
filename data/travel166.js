@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'那颗最亮的星星，是我对你的深情告白。',date:'2023/05/03 11:17:07',where:'西班牙冒险港公园'}})()

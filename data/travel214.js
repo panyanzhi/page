@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'第五次，它自由软弱，却把它认为是生命的坚韧；',date:'2023/03/03 11:17:07',where:'卡提夫绿洲'}})()

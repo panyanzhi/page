@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'仅java 中文日志乱码，解决：在Java应用程序启动时添加启动参数-Dfile.encoding=utf-8即可',date:'2023/03/03 11:17:07',where:'洛子峰'}})()

@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'将错就错走向犯罪',date:'2023/05/03 11:17:07',where:'冰岛蓝湖地热温泉'}})()

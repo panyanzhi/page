@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'对于数组、null、对象来说，其关系错综复杂，使用 typeof 都会统一返回 “object” 字符串。',date:'2023/05/03 11:17:07',where:'美国大雾山国家公园'}})()

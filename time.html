@@ -5,8 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./vue/favicon.ico">
     <link rel="stylesheet" href="./reset.css" type="text/css" />
-    <title>时间在流逝</title>
+    <title>攀岩志 - 时间在流逝</title>
+    <meta name="Keywords" content="攀岩志,团队,开发,热爱,软件,创业,业余,设计,时间,开发,app,小程序,erp系统,oa系统,客户端,网站">
+    <meta name="Description" content="攀岩志(团队)由一群热爱开发的小伙伴组队而成，愿意利用业余时间承接些软件开发的项目工程，以此助力广大有志者使用软件的形式来管理或推广自己公司产品与业务。">
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?1b1814c2eafdecc146e4a8bf234c7e12";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
     <style>
         body {
             padding: 10px;
@@ -15,6 +27,10 @@
 
         .time {
             text-align: center;
+            color: #999999;
+        }
+
+        #link {
             color: #999999;
         }
 
@@ -28,7 +44,7 @@
 <body>
     <ul class="time">
         <li id="title">
-            时间在流逝 · 开心健康
+            <a id="link" target="_blank">时间在流逝 · 开心健康</a>
         </li>
         <li id="age"></li>
         <li id="time"></li>
@@ -37,7 +53,7 @@
         <li id="footer"></li>
     </ul>
     <script>
-        function update() {
+        function update () {
             var date = new Date()
             var utc8DiffMinutes = date.getTimezoneOffset() + 480
             date.setMinutes(date.getMinutes() + utc8DiffMinutes)
@@ -52,11 +68,11 @@
             document.getElementById("week").innerHTML = weekString
         }
 
-        function zeroNum(num) {
+        function zeroNum (num) {
             return ('0' + num).slice(-2)
         }
 
-        function queryURLParams(url) {
+        function queryURLParams (url) {
             let href = decodeURI(url)
             let query = href.substring(href.indexOf('?') + 1);
             let param = query.split("&");
@@ -80,6 +96,11 @@
             if (params.age) {
                 var age = 100 - parseInt(params.age)
                 document.getElementById("age").innerHTML = '若你能活到100岁<br />那么你还剩约' + age + '年'
+            }
+            if (params.link) {
+                document.getElementById("link").href = params.link
+                document.getElementById("link").style['text-decoration'] = 'underline'
+                document.getElementById("link").style.color = 'rgb(166, 190, 239)'
             }
             if (params.size) {
                 document.body.style.fontSize = params.size + 'px'

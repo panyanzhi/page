@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'“为人不做亏心事，半夜不怕鬼敲门”',date:'2023/03/03 11:17:07',where:'甘南大草原'}})()

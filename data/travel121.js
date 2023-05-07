@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我们的相遇，就像唱响了一曲无限循环的歌曲。',date:'2023/05/03 11:17:07',where:'错达日玛胡'}})()

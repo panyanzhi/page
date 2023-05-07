@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'私藏了无数的笑话，足以让你喜欢我一辈子。',date:'2023/05/03 11:17:07',where:'九寨沟瀑布群'}})()

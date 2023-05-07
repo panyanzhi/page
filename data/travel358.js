@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'时代的一粒灰，落在个人头上，就是一座山。',date:'2023/05/03 11:17:07',where:'波斯湾'}})()

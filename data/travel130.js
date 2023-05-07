@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'愿我们的友情从此刻开始，可以穿越岁月的洗礼。',date:'2023/05/03 11:17:07',where:'北京'}})()

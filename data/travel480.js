@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'“modernizr.js库Modernizr是一个易用并且轻量级的库，可以检测各种Web技术的支持情况。Modernizr创建了一组静态的布尔值，可以检测是否支持Canvas。”',date:'2023/05/03 11:17:07',where:'澳大利亚沙漠'}})()

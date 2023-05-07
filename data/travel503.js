@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'Socket、Servlet、Tomcat 关系: 1、Socket：遵循TCP/IP(也包括UDT)协议的实现，是通过它来进行的网络通信，比如你和你的好友通过QQ进行聊天，其实是你的电脑和他的电脑在通过Socket在进行数据的交互。2、Servlet：是J2EE标准的一部分，制定了Java中处理Web请求的标准。Servlet的作用是接收、处理、返回遵循HTTP协议的报文。是Socket的一种应用。(标准跟协议一样，都是一种规范，不过标准的区别在于它具有强制性的意义)3、Tomcat：Servlet是一种标准，它的实现就是通过Tomcat这个容器来完成的。',date:'2023/05/03 11:17:07',where:'泰国苏梅岛上芒库莱潘酒店'}})()

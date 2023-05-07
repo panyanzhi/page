@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'宇宙充满了能量，我们也能够从它那里吸取力量。',date:'2023/05/03 11:17:07',where:'日本别府温泉'}})()

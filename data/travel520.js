@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'所有的悲伤都来源于熟悉事物的消逝。',date:'2023/05/03 11:17:07',where:'安第斯山脉'}})()

@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'无论场景多美好，都不如和你一起生活。',date:'2023/05/03 11:17:07',where:'波西塔诺'}})()

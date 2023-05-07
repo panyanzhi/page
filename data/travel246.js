@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'就好像心中的钻石一样闪耀……你',date:'2023/03/03 11:17:07',where:'雪达根大金寺'}})()

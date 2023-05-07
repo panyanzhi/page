@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我们像是两颗遥远的星球，在宇宙的另一边相识相知。',date:'2023/05/03 11:17:07',where:'马拉维湖'}})()

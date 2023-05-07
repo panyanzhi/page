@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'css实现性能的方式可以从选择器嵌套、属性特性、减少http这三面考虑，同时还要注意css代码的加载顺序',date:'2023/05/03 11:17:07',where:'波西塔诺'}})()

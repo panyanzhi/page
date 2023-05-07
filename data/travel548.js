@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'人生不用急 好吃 慢喝 来日方长 ​​​',date:'2023/05/03 11:17:07',where:'印度泰姬陵'}})()

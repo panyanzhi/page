@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'先是恨，后是爱，',date:'2023/03/03 11:17:07',where:'撒哈拉沙漠'}})()

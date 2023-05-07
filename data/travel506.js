@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'servlet是Socket的一种应用，完全可以通过socket实现一套自己的Servlet',date:'2023/05/03 11:17:07',where:'卡奔塔利湾'}})()

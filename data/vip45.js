@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我愿意为你带来快乐，为了我们的爱情，我愿意奋斗！',date:'2023/05/03 11:17:07',where:'普吉岛'}})()

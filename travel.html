@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./vue/favicon.ico">
+  <link rel="stylesheet" href="./reset.css" type="text/css" />
+  <title>攀岩志 - 穿越电波</title>
+  <meta name="Keywords" content="攀岩志,团队,开发,热爱,软件,创业,业余,设计,时间,开发,app,小程序,erp系统,oa系统,客户端,网站">
+  <meta name="Description" content="攀岩志(团队)由一群热爱开发的小伙伴组队而成，愿意利用业余时间承接些软件开发的项目工程，以此助力广大有志者使用软件的形式来管理或推广自己公司产品与业务。">
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1b1814c2eafdecc146e4a8bf234c7e12";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <style>
+    body {
+      background-color: #f1f1f1;
+    }
+
+    .pyz-card {
+      margin: 50px auto;
+      width: 90%;
+      background-color: rgb(16, 16, 17);
+      background-image: url('./img/star.png');
+      background-size: 100%;
+      position: relative;
+      border-radius: 8px;
+      color: white;
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 8px;
+    }
+
+    #header-title {
+      color: azure;
+      font-size: 13px;
+    }
+
+    #content {
+      padding: 10px 8px;
+      opacity: 0.8;
+    }
+
+    #footer {
+      padding: 0 8px;
+      font-size: 12px;
+      color: azure;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pyz-card">
+    <p class="header">
+      <img src="./img/fengjing.png" width="32" />
+      <span id="header-title" style="vertical-align: middle;margin-left: 4px;">穿越电波</span>
+    </p>
+    <p id="content">
+      正在解析电波，请稍等...
+    </p>
+    <p id="footer" style="text-align: right;">
+      <span id="footer-txt">穿越之门8051</span>
+      <span style="margin: 0 4px;">·</span>
+      <a href="https://doc.weixin.qq.com/forms/AKQAYwcpADkATkAnAbUAIoG5UcNocZR1f"
+        style="text-decoration:underline;color:bisque">应答</a>
+    </p>
+  </div>
+  <iframe id="timeLink" src="./time.html" title="攀岩志 - 时间在流逝" frameborder="0" width="100%" height="150"></iframe>
+  <script>
+    window.onload = function () {
+      const params = queryURLParams(location.href)
+      const header = document.getElementById("header-title")
+      if (params.type) {
+        const dict = {
+          travel: '穿越电波',
+          vip: '专属电波',
+          work: '工作电波',
+          like: '爱情电波',
+        }
+        header.textContent = dict[params.type] ? dict[params.type] : '未知电波'
+      } else {
+        params.type = 'travel'
+      }
+      if (params.type === 'travel' || params.type === 'vip') {
+        const link = document.getElementById("timeLink")
+        link.src = './time.html?link=./index.html'
+      }
+      const dataId = parseInt(params.id, 2)
+      let fileId = '500'
+      if (isNaN(dataId) === false) {
+        fileId = params.type + dataId
+        header.textContent = header.textContent + ' · 编号' + dataId
+      }
+      laodData(fileId, params).then(setDianbo)
+    }
+
+    function setDianbo (resp) {
+      document.getElementById("content").innerHTML = resp.content
+      const when = timeago(resp.date)
+      const footerTxt = `${when.indexOf('NaN') === -1 ? when : '未知时间'}来自“${resp.where ? resp.where : '一道风景'}”的电波`
+      document.getElementById("footer-txt").innerHTML = footerTxt
+    }
+
+    function laodData (fileId, params) {
+      const path = './data/' + fileId + '.js'
+      if (UrlExists(path)) {
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = path;
+        return new Promise((resolve, reject) => {
+          head.appendChild(script);
+          script.onload = function () {
+            const resp = window.dianbo
+            resp.content = params.content || resp.content
+            resp.date = params.date || resp.date
+            resp.where = params.where || resp.where
+            resolve(resp)
+          }
+        })
+      } else {
+        return laodData(404, params)
+      }
+    }
+
+    function queryURLParams (url) {
+      let href = decodeURI(url)
+      let query = href.substring(href.indexOf('?') + 1);
+      let param = query.split("&");
+      let obj = {}
+      for (var i = 0; i < param.length; i++) {
+        let per = param[i].split("=");
+        obj[per[0]] = per[1]
+      }
+      return obj;
+    }
+
+    function UrlExists (url) {
+      if (location.origin === 'file://') {
+        return true
+      }
+      var http = new XMLHttpRequest();
+      http.open('HEAD', url, false);
+      http.send();
+      return http.status != 404;
+    }
+
+    function timeago (dateString) {
+      var minute = 1000 * 60;
+      var hour = minute * 60;
+      var day = hour * 24;
+      var week = day * 7;
+      var halfamonth = day * 15;
+      var month = day * 30;
+      var now = new Date().getTime();
+      var dateTimeStamp = dateString
+      if (typeof dateString === 'string') {
+        const temString = dateString + ''
+        if (temString.indexOf('-') >= 0) {
+          dateTimeStamp = new Date(temString.replace(/-/g, '/')).getTime()
+        } else {
+          dateTimeStamp = new Date(temString).getTime()
+        }
+      }
+      var diffValue = now - dateTimeStamp;
+      if (diffValue < 0) {
+        return dateString;
+      }
+      var minC = diffValue / minute;
+      var hourC = diffValue / hour;
+      var dayC = diffValue / day;
+      var weekC = diffValue / week;
+      var monthC = diffValue / month;
+      if (monthC >= 1 && monthC <= 3) {
+        result = " " + parseInt(monthC) + "月前"
+      } else if (weekC >= 1 && weekC <= 3) {
+        result = " " + parseInt(weekC) + "周前"
+      } else if (dayC >= 1 && dayC <= 6) {
+        result = " " + parseInt(dayC) + "天前"
+      } else if (hourC >= 1 && hourC <= 23) {
+        result = " " + parseInt(hourC) + "小时前"
+      } else if (minC >= 1 && minC <= 59) {
+        result = " " + parseInt(minC) + "分钟前"
+      } else if (diffValue >= 0 && diffValue <= minute) {
+        result = "刚刚"
+      } else {
+        var datetime = new Date();
+        datetime.setTime(dateTimeStamp);
+        var Nyear = datetime.getFullYear();
+        var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+        var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+        var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
+        var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
+        var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
+        result = Nyear + "-" + Nmonth + "-" + Ndate
+      }
+      return result;
+    }
+  </script>
+</body>
+
+</html>

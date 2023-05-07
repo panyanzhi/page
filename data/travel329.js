@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'Spring Boot 是 Spring 框架的扩展和自动化，它消除了在 Spring 中需要进行的 XML( EXtensible Markup Language )文件配置(若习惯 XML 配置，则依然可以使用)，使得开发变得更快、更高效、更自动化。',date:'2023/05/03 11:17:07',where:'德国欧洲主题公园'}})()

@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我的愿望，就是能和你一起看尽这世间美好风景。',date:'2023/05/03 11:17:07',where:'海王星'}})()

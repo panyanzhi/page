@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'好像不是什么事儿；',date:'2023/03/03 11:17:07',where:'新西兰哈普库树顶屋酒店'}})()

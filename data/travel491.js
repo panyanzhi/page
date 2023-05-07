@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'万物生机勃勃，我遂能生机勃勃：',date:'2023/05/03 11:17:07',where:'澳大利亚黄金海岸'}})()

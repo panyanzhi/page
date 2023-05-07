@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'相遇的那一刻，一切都变得可能。',date:'2023/05/03 11:17:07',where:'戈壁沙漠'}})()

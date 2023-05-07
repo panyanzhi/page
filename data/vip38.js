@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我想用我的青春和人生来守护你，保护你。',date:'2023/05/03 11:17:07',where:'日本富士山'}})()

@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'责怪只会让人退步，鼓励才让人进步',date:'2023/03/03 11:17:07',where:'斐济岛'}})()

@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'认知不在一个频道，不如悄悄转身各自安好。',date:'2023/03/03 11:17:07',where:'冥王星'}})()

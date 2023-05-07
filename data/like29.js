@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'生命对我来说，最大的幸福就是与你相伴，即便只有片刻。',date:'2023/05/03 11:17:07',where:'泰国'}})()

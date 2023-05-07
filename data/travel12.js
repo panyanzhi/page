@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'两个陌生人在一起闲聊，像是已经相识了许久。',date:'2023/05/03 11:17:07',where:'阿姆斯特丹'}})()

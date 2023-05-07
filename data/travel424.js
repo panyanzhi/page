@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'时代周刊将百大人物分成六个类型：Icon（名流）、Pioneer（先驱）、Titan（巨匠）、Leader（领袖）、Innovators（创造家）。',date:'2023/05/03 11:17:07',where:'鄂尔多斯大草原'}})()

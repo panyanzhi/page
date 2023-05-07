@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'UGC 互联网术语，全称为User Generated Content，也就是用户生成内容，即用户原创内容。',date:'2023/05/03 11:17:07',where:'九寨沟瀑布群'}})()

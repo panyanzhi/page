@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'光就像水，你一扭开龙头，它就出来了。',date:'2023/05/03 11:17:07',where:'瑞士'}})()

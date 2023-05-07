@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'血压可以判断心脏功能与外周血管阻力。成人：收缩压90～139mmHg和舒张压60~89mmHg，儿童：收缩压80～120mmHg和舒张压60~80mmHg',date:'2023/05/03 11:17:07',where:'皇后镇'}})()

@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'先是对我们说实话，',date:'2023/03/03 11:17:07',where:'巴芬湾'}})()

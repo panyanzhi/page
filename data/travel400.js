@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'留恋激情和欲望是愚蠢的。',date:'2023/05/03 11:17:07',where:'美国六旗游乐园'}})()

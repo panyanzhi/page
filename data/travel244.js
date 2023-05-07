@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'你就像不会滚远的点一样围绕在我身边，',date:'2023/03/03 11:17:07',where:'巴黎'}})()

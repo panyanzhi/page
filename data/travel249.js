@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'我不想我也是这样的，',date:'2023/03/03 11:17:07',where:'伊塞克湖'}})()

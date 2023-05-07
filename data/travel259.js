@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'忽然地改变主意，',date:'2023/03/03 11:17:07',where:'加拿大'}})()

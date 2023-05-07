@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'祝福我们能够意识到彼此的存在，并真诚相待。',date:'2023/05/03 11:17:07',where:'鱼河大峡谷'}})()

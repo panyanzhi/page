@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'<meta http-equiv='Content-Security-Policy' content='upgrade-insecure-requests'>',date:'2023/05/03 11:17:07',where:'新西兰哈普库树顶屋酒店'}})()

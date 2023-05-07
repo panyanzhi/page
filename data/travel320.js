@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'度过幸福一生的人 少之又少',date:'2023/05/03 11:17:07',where:'美国大峡谷'}})()

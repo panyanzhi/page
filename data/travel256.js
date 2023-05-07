@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'她也继续地盲目地改变着；',date:'2023/03/03 11:17:07',where:'丹麦哥本哈根提沃利公园'}})()

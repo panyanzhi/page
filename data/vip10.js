@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'今天是世界上最浪漫的日子，只因是和你在一起的时光。',date:'2023/05/03 11:17:07',where:'冥王星'}})()

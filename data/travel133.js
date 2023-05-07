@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'相遇那一刻，仿佛寻找到了失落已久的记忆。',date:'2023/05/03 11:17:07',where:'泰姬陵'}})()

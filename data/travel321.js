@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'因此 绝大部分没那么幸运的人',date:'2023/05/03 11:17:07',where:'皇后镇'}})()

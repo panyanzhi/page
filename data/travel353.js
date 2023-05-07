@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'Tomcat 作为一个“HTTP 服务器 + Servlet 容器”，它向开发人员屏蔽应用层协议和网络通信细节，我们拿到的是一个标准的 Request 和 Response 对象；而具体业务逻辑则作为变化点，交给我们来实现。',date:'2023/05/03 11:17:07',where:'台湾东海岸'}})()

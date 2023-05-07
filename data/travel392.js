@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'You should hope for courage and try for honor. 你要怀着勇气，去争取荣誉。',date:'2023/05/03 11:17:07',where:'香港洲际酒店'}})()

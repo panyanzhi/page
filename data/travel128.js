@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'不管多困难，都要鼓励自己坚持下去。',date:'2023/05/03 11:17:07',where:'博茨瓦纳奥卡万戈三角洲'}})()

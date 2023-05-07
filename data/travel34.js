@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'夜深人静，未来遥远，却在这相遇，与你共度一生。',date:'2023/05/03 11:17:07',where:'澳大利亚的Capertee峡谷'}})()

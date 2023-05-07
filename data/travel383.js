@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'《王者荣耀》是由腾讯游戏天美工作室群开发并运行的一款运营在Android、IOS、NS平台上的MOBA类国产手游，于2015年11月26日在Android、iOS平台上正式公测，游戏前期使用名称有《英雄战迹》、《王者联盟》。《传说对决》（Arena Of Valor），即《王者荣耀》的欧美版本于2018年在任天堂Switch平台发售。[1]',date:'2023/05/03 11:17:07',where:'纽约'}})()

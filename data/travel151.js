@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'相遇并不容易，但只有相遇才有机会相知。',date:'2023/05/03 11:17:07',where:'威海国际海水浴场'}})()

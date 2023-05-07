@@ -1,0 +1,1 @@
+(function(){window.dianbo = {content:'终于明白，像需要光明一样，人有时候也需要幽暗。',date:'2023/05/03 11:17:07',where:'阿拉伯沙漠'}})()
