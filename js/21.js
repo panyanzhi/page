@@ -25,7 +25,7 @@ function autoDownload(max = 15, free = false) {
     prefix = 'https://www.21cnjy.com/asset/download-view?downType=0&id=idx&coin=0&vipCoin=0'
   }
   const list = document.body.querySelectorAll('.cell a')
-  let count = list.length > max ? list.length : max
+  let count = list.length < max ? list.length : max
   for (let i = 0; i < count; i++) {
     const a = list[i]
     const infos = a.href.split('/')
