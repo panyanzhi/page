@@ -1,5 +1,5 @@
 
-(function appendBtns() {
+(function appendBtns () {
   const form = document.body.querySelector('.el-form-item__content').parentElement.parentElement
   const btns = [{ label: 'vip15', free: false, count: 15 }, { label: 'vip5', free: false, count: 5 }, { label: 'free5', free: true, count: 5 }]
   for (let i = 0; i < btns.length; i++) {
@@ -17,8 +17,8 @@
 })()
 
 
-function autoDownload(max = 15, free = false) {
-  const result = window.confirm('将帮您每隔10秒，自动连续下载，确定操吗？')
+function autoDownload (max = 15, free = false) {
+  const result = window.confirm('将帮您每隔10秒，自动连续下载，确定操作吗？')
   if (result === false) return
   let prefix = 'https://www.21cnjy.com/asset/download-view?downType=1&id=idx'
   if (free) {
@@ -31,7 +31,8 @@ function autoDownload(max = 15, free = false) {
     const infos = a.href.split('/')
     const id = infos[infos.length - 1].split('.')[0]
     const nextA = prefix.replace('idx', id)
-    setTimeout(() => { window.open(nextA, '_blank') }, 10 * i * 1000)
+    const per = Math.floor(Math.random() * 4) + 1 // 返回 1 至 4 之间的数
+    setTimeout(() => { window.open(nextA, '_blank') }, per * i * 1000)
   }
 }
 
