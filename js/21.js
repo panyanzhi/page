@@ -41,10 +41,10 @@ function getTitles () {
   const list = []
   // 合并隐藏单元格
   const trs = document.querySelectorAll('.table-block tr')
-  trs[0].children[3].textContent = '待上传文件'
   for (let index = 0; index < trs.length; index++) {
     const tr = trs[index];
     tr.children[3].colSpan = 4
+    tr.children[3].textContent = ''
     tr.children[4].style.display = 'none'
     tr.children[5].style.display = 'none'
     tr.children[6].style.display = 'none'
@@ -54,6 +54,7 @@ function getTitles () {
       el: tr.children[3]
     })
   }
+  trs[0].children[3].textContent = '待上传文件'
   return list
 }
 
