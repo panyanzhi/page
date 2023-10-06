@@ -43,18 +43,16 @@ function getTitles () {
   const trs = document.querySelectorAll('.table-block tr')
   for (let index = 0; index < trs.length; index++) {
     const tr = trs[index];
-    tr.children[3].colSpan = 4
-    tr.children[3].textContent = ''
+    tr.children[3].colSpan = 3
     tr.children[4].style.display = 'none'
     tr.children[5].style.display = 'none'
-    tr.children[6].style.display = 'none'
     list.push({
       resourceId: tr.children[0].textContent,
       title: tr.children[2].textContent,
       el: tr.children[3]
     })
   }
-  trs[0].children[3].textContent = '待上传文件'
+  trs[0].children[3].textContent = '待上传文件名称'
   return list
 }
 
@@ -68,7 +66,7 @@ function handleFileUpload (event) {
     const fileName = file.name.split('.').slice(0, -1).join('.')
     const td = getSameTd(fileName, list)
     if (td.resourceId) {
-      td.el.textContent = fileName
+      td.el.textContent = file.name
       file.resourceId = td.resourceId
     } else {
       console.log(fileName, 404)
@@ -84,7 +82,7 @@ function getSameTd (fileName, list) {
     // td.title 和 fileName的相似度，取最大的一个
     const sameValue = similarity(td.title, fileName)
     console.log(sameValue, 'td.title', td.title, 'fileName', fileName)
-    if (max <= sameValue && sameValue > 0.9) {
+    if (max <= sameValue && sameValue > 0.88) {
       max = sameValue
       target = td
     }
@@ -109,7 +107,7 @@ function autoDownload (max = 15, free = false) {
     const nextA = prefix.replace('idx', id)
     setTimeout(() => {
       window.open(nextA, '_blank')
-    }, 5 * i * 1000)
+    }, 3 * i * 1000)
   }
 }
 
@@ -127,7 +125,7 @@ async function uploadFiles () {
       if (td) {
         td.el.textContent = ''
       }
-      btn.textContent = file.resourceId + '正在上传'
+      btn.textContent = file.resourceId + '上传中'
     } else {
       console.log(file.name, 'uploaded')
     }
@@ -135,7 +133,6 @@ async function uploadFiles () {
   input.value = ''
   btn.disabled = false
   btn.textContent = '批量上传'
-  alert('上传完成')
 }
 
 function uploadFile (file) {
