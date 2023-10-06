@@ -9,6 +9,7 @@
     btnE.style = 'height: 30px;margin:10px;'
     btnE.innerHTML = btn.label
     btnE.title = '一次性连续下载下方列表的' + btn.count + '份资料'
+    btnE.type = 'button'
     btnE.addEventListener("click", () => {
       autoDownload(btn.count, btn.free)
     })
