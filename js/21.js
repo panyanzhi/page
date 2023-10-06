@@ -109,7 +109,7 @@ function autoDownload (max = 15, free = false) {
     const nextA = prefix.replace('idx', id)
     setTimeout(() => {
       window.open(nextA, '_blank')
-    }, (2 + i) * 1000)
+    }, 5 * i * 1000)
   }
 }
 
