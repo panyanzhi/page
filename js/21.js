@@ -109,9 +109,6 @@ function autoDownload (max = 15, free = false) {
     const per = Math.floor(Math.random() * 3) + 2 // 返回 1 至 4 之间的数
     setTimeout(() => {
       window.open(nextA, '_blank')
-      if (i === count - 1) {
-        alert('最后一个了')
-      }
     }, per * i * 1000)
   }
 }
