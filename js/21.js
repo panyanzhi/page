@@ -107,10 +107,9 @@ function autoDownload (max = 15, free = false) {
     const infos = a.href.split('/')
     const id = infos[infos.length - 1].split('.')[0]
     const nextA = prefix.replace('idx', id)
-    const per = Math.floor(Math.random() * 3) + 2 // 返回 1 至 4 之间的数
     setTimeout(() => {
       window.open(nextA, '_blank')
-    }, (per * 1 + i) * 1000)
+    }, (2 + i) * 1000)
   }
 }
 
