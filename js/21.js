@@ -109,19 +109,24 @@ function autoDownload (max = 15, free = false) {
     const per = Math.floor(Math.random() * 3) + 2 // 返回 1 至 4 之间的数
     setTimeout(() => {
       window.open(nextA, '_blank')
-    }, per * i * 1000)
+    }, (per * 1 + i) * 1000)
   }
 }
 
 async function uploadFiles () {
   const input = document.getElementById('fileUpload');
   const btn = document.getElementById('pyz_file')
+  const list = getTitles()
   btn.disabled = true
   const files = input.files
   for (let i = 0; i < files.length; i++) {
     const file = files[i]
     if (file.resourceId) {
       await uploadFile(file);
+      const td = list.find(item => item.resourceId === file.resourceId)
+      if (td) {
+        td.el.textContent = ''
+      }
       btn.textContent = file.resourceId + '正在上传'
     } else {
       console.log(file.name, 'uploaded')
