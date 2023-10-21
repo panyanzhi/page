@@ -38,12 +38,14 @@ function appendBtns () {
 
 function getReasonDom () {
   const div1 = document.createElement('div')
-  div1.style = 'padding: 4px'
+  div1.style = 'display:flex;'
   const textArea = document.createElement('textarea')
   textArea.placeholder = '1,2,3'
+  textArea.style = 'width: 580px;height: 64px;'
   const button = document.createElement('button')
   button.innerHTML = '选择全部'
   button.type = 'button'
+  button.style = 'margin: 0 4px;'
 
   // 添加点击事件到按钮
   button.addEventListener('click', function () {
@@ -61,6 +63,7 @@ function getReasonDom () {
   const button1 = document.createElement('button')
   button1.innerHTML = '一键废弃'
   button1.type = 'button'
+  button1.style = 'margin: 0 4px;'
 
   // 添加点击事件到按钮
   button1.addEventListener('click', async function () {
@@ -78,6 +81,7 @@ function getReasonDom () {
           button1.innerHTML = id + '废弃失败'
         }
       }
+      textArea.value = ''
       button1.disabled = false
       button1.innerHTML = '一键废弃'
     } else {
@@ -222,12 +226,11 @@ function feiqi (id, remark) {
         console.log('废弃成功！');
         resolve(true);
       } else {
-        console.error('文件上传失败：' + response.statusText);
-        reject();
+        console.error('废弃失败：' + response.message);
+        resolve(false);
       }
     }).catch(error => {
-      console.error('上传发生错误：', error);
-      reject();
+      resolve(false);
     });
   });
 }
