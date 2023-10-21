@@ -3,9 +3,6 @@ appendBtns()
 
 function appendBtns () {
   const div = document.body.querySelector('.el-form-item__content').parentElement.parentElement
-  // const div = document.createElement('div')
-  // div.style = 'margin: 4px'
-  // form.appendChild(div)
   // 下载按钮
   const btns = [{ label: 'vip15', free: false, count: 15 }, { label: 'vip5', free: false, count: 5 }, { label: 'free5', free: true, count: 5 }]
   for (let i = 0; i < btns.length; i++) {
@@ -35,6 +32,62 @@ function appendBtns () {
   btnE.innerHTML = '批量上传'
   btnE.addEventListener("click", uploadFiles)
   div.appendChild(btnE)
+
+  div.appendChild(getReasonDom())
+}
+
+function getReasonDom () {
+  const div1 = document.createElement('div')
+  div1.style = 'padding: 4px'
+  const textArea = document.createElement('textarea')
+  textArea.placeholder = '1,2,3'
+  const button = document.createElement('button')
+  button.innerHTML = '选择全部'
+
+  // 添加点击事件到按钮
+  button.addEventListener('click', function () {
+    const trs = document.querySelectorAll('.table-block tr')
+    const ids = []
+    for (let index = 1; index < array.length; index++) {
+      const td = trs[index].children[0].children[0];
+      ids.push(td.innerText)
+    }
+    textArea.value = ids.join('，')
+  })
+
+  const input = document.createElement('input')
+  input.placeholder = '废弃理由'
+  const button1 = document.createElement('button')
+  button1.innerHTML = '一键废弃'
+
+  // 添加点击事件到按钮
+  button1.addEventListener('click', async function () {
+    const ids = textArea.value.split('，')
+    if (ids.length && input.value) {
+      const result = window.confirm('一键废弃，确定操作吗？')
+      if (result === false) return
+      button1.disabled = true
+      for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+        const resp = await feiqi(id, input.value)
+        if (resp) {
+          button1.innerHTML = id + '废弃中'
+        } else {
+          button1.innerHTML = id + '废弃失败'
+        }
+      }
+      button1.disabled = false
+      button1.innerHTML = '一键废弃'
+    } else {
+      alert('ids或理由不能为空')
+    }
+  })
+
+  div1.appendChild(textArea)
+  div1.appendChild(button)
+  div1.appendChild(input)
+  div1.appendChild(button1)
+  return div1
 }
 
 function getTitles () {
@@ -147,6 +200,25 @@ function uploadFile (file) {
       if (response.ok) {
         console.log('文件上传成功！');
         resolve();
+      } else {
+        console.error('文件上传失败：' + response.statusText);
+        reject();
+      }
+    }).catch(error => {
+      console.error('上传发生错误：', error);
+      reject();
+    });
+  });
+}
+
+function feiqi (id, remark) {
+  return new Promise((resolve, reject) => {
+    fetch('/console/resource/discard/' + id + '?remark=' + remark, {
+      method: 'POST'
+    }).then(response => {
+      if (response.ok) {
+        console.log('废弃成功！');
+        resolve(true);
       } else {
         console.error('文件上传失败：' + response.statusText);
         reject();
