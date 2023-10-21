@@ -43,12 +43,13 @@ function getReasonDom () {
   textArea.placeholder = '1,2,3'
   const button = document.createElement('button')
   button.innerHTML = '选择全部'
+  button.type = 'button'
 
   // 添加点击事件到按钮
   button.addEventListener('click', function () {
     const trs = document.querySelectorAll('.table-block tr')
     const ids = []
-    for (let index = 1; index < array.length; index++) {
+    for (let index = 1; index < trs.length; index++) {
       const td = trs[index].children[0].children[0];
       ids.push(td.innerText)
     }
@@ -59,6 +60,7 @@ function getReasonDom () {
   input.placeholder = '废弃理由'
   const button1 = document.createElement('button')
   button1.innerHTML = '一键废弃'
+  button1.type = 'button'
 
   // 添加点击事件到按钮
   button1.addEventListener('click', async function () {
@@ -67,8 +69,8 @@ function getReasonDom () {
       const result = window.confirm('一键废弃，确定操作吗？')
       if (result === false) return
       button1.disabled = true
-      for (let index = 0; index < array.length; index++) {
-        const element = array[index];
+      for (let index = 0; index < ids.length; index++) {
+        const id = ids[index];
         const resp = await feiqi(id, input.value)
         if (resp) {
           button1.innerHTML = id + '废弃中'
