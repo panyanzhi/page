@@ -4,7 +4,7 @@ appendBtns()
 function appendBtns () {
   const div = document.body.querySelector('.el-form-item__content').parentElement.parentElement
   // 下载按钮
-  const btns = [{ label: 'vip15', free: false, count: 15 }, { label: 'vip5', free: false, count: 5 }, { label: 'free5', free: true, count: 5 }]
+  const btns = [{ label: 'vip15', free: false, count: 15 },{ label: 'vip10', free: false, count: 10 }, { label: 'vip5', free: false, count: 5 }, { label: 'free5', free: true, count: 5 }]
   for (let i = 0; i < btns.length; i++) {
     const btn = btns[i]
     const btnE = document.createElement('button')
