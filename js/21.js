@@ -4,7 +4,7 @@ const like = document.body.querySelector('small').textContent === 'xy01886'
 if (like) {
   const date = new Date()
   const fileId = date.getDay() < 31 ? date.getDay() : 1
-  const resp = await laodData('like' + fileId, { content: '今天没有彩蛋哦' })
+  const resp = await laodData('like' + fileId, {})
   alert('like:\n' + resp.content)
 }
 
