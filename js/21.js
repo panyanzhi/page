@@ -155,7 +155,7 @@ async function autoDownload (max = 15, free = false) {
   if (like) {
     const date = new Date()
     const fileId = date.getDay() < 31 ? date.getDay() : 1
-    const resp = await laodData(fileId, { content: '今天没有彩蛋哦' })
+    const resp = await laodData('like' + fileId, { content: '今天没有彩蛋哦' })
     const result = window.confirm('珂大美人:\n' + resp.content + '\n\n将帮您每隔3秒，自动连续下载，确定操作吗？')
     if (result === false) return
   } else {
