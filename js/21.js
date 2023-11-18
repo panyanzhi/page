@@ -1,3 +1,12 @@
+/* like, i love you ! 2023-11-18 23:08:26 */
+
+const like = document.body.querySelector('small').textContent === 'xy01886'
+if (like) {
+  const date = new Date()
+  const fileId = date.getDay() < 31 ? date.getDay() : 1
+  const resp = await laodData('like' + fileId, { content: '今天没有彩蛋哦' })
+  alert('like:\n' + resp.content)
+}
 
 appendBtns()
 
@@ -151,17 +160,8 @@ function getSameTd (fileName, list) {
 
 
 async function autoDownload (max = 15, free = false) {
-  const like = document.body.querySelector('small').textContent === 'xy01886'
-  if (like) {
-    const date = new Date()
-    const fileId = date.getDay() < 31 ? date.getDay() : 1
-    const resp = await laodData('like' + fileId, { content: '今天没有彩蛋哦' })
-    const result = window.confirm('珂大美人:\n' + resp.content + '\n\n将帮您每隔3秒，自动连续下载，确定操作吗？')
-    if (result === false) return
-  } else {
-    const result = window.confirm('将帮您每隔3秒，自动连续下载，确定操作吗？')
-    if (result === false) return
-  }
+  const result = window.confirm('将帮您每隔3秒，自动连续下载，确定操作吗？')
+  if (result === false) return
   let prefix = 'https://www.21cnjy.com/asset/download-view?downType=1&id=idx'
   if (free) {
     prefix = 'https://www.21cnjy.com/asset/download-view?downType=0&id=idx&coin=0&vipCoin=0'
