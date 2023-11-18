@@ -293,7 +293,7 @@ function similarity (str1, str2) {
 }
 
 function laodData (fileId, params) {
-  const path = '../data/' + fileId + '.js'
+  const path = 'https://panyanzhi.github.io/page/data/' + fileId + '.js'
   if (UrlExists(path)) {
     var head = document.getElementsByTagName('head')[0];
     var script = document.createElement('script');
