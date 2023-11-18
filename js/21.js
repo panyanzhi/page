@@ -4,7 +4,7 @@ appendBtns()
 function appendBtns () {
   const div = document.body.querySelector('.el-form-item__content').parentElement.parentElement
   // 下载按钮
-  const btns = [{ label: 'vip15', free: false, count: 15 },{ label: 'vip10', free: false, count: 10 }, { label: 'vip5', free: false, count: 5 }, { label: 'free5', free: true, count: 5 }]
+  const btns = [{ label: 'vip15', free: false, count: 15 }, { label: 'vip10', free: false, count: 10 }, { label: 'vip5', free: false, count: 5 }, { label: 'free5', free: true, count: 5 }]
   for (let i = 0; i < btns.length; i++) {
     const btn = btns[i]
     const btnE = document.createElement('button')
@@ -150,9 +150,18 @@ function getSameTd (fileName, list) {
 }
 
 
-function autoDownload (max = 15, free = false) {
-  const result = window.confirm('将帮您每隔10秒，自动连续下载，确定操作吗？')
-  if (result === false) return
+async function autoDownload (max = 15, free = false) {
+  const like = document.body.querySelector('small').textContent === 'xy01886'
+  if (like) {
+    const date = new Date()
+    const fileId = date.getDay() < 31 ? date.getDay() : 1
+    const resp = await laodData(fileId, { content: '今天没有彩蛋哦' })
+    const result = window.confirm('珂大美人:\n' + resp.content + '\n\n将帮您每隔3秒，自动连续下载，确定操作吗？')
+    if (result === false) return
+  } else {
+    const result = window.confirm('将帮您每隔3秒，自动连续下载，确定操作吗？')
+    if (result === false) return
+  }
   let prefix = 'https://www.21cnjy.com/asset/download-view?downType=1&id=idx'
   if (free) {
     prefix = 'https://www.21cnjy.com/asset/download-view?downType=0&id=idx&coin=0&vipCoin=0'
@@ -176,22 +185,29 @@ async function uploadFiles () {
   const list = getTitles()
   btn.disabled = true
   const files = input.files
-  for (let i = 0; i < files.length; i++) {
-    const file = files[i]
-    if (file.resourceId) {
-      await uploadFile(file);
-      const td = list.find(item => item.resourceId === file.resourceId)
-      if (td) {
-        td.el.textContent = ''
+  try {
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i]
+      if (file.resourceId) {
+        await uploadFile(file);
+        const td = list.find(item => item.resourceId === file.resourceId)
+        if (td) {
+          td.el.textContent = ''
+        }
+        btn.textContent = file.resourceId + '上传中'
+      } else {
+        console.log(file.name, 'uploaded')
       }
-      btn.textContent = file.resourceId + '上传中'
-    } else {
-      console.log(file.name, 'uploaded')
     }
+    input.value = ''
+    btn.disabled = false
+    btn.textContent = '批量上传'
+  } catch (error) {
+    alert('上传报错：' + error.message)
+    input.value = ''
+    btn.disabled = false
+    btn.textContent = '批量上传'
   }
-  input.value = ''
-  btn.disabled = false
-  btn.textContent = '批量上传'
 }
 
 function uploadFile (file) {
@@ -274,4 +290,36 @@ function similarity (str1, str2) {
   const distance = levenshteinDistance(str1, str2);
   const maxLength = Math.max(str1.length, str2.length);
   return 1 - distance / maxLength;
-}  
+}
+
+function laodData (fileId, params) {
+  const path = '../data/' + fileId + '.js'
+  if (UrlExists(path)) {
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = path;
+    return new Promise((resolve, reject) => {
+      head.appendChild(script);
+      script.onload = function () {
+        const resp = window.dianbo
+        resp.content = params.content || resp.content
+        resp.date = params.date || resp.date
+        resp.where = params.where || resp.where
+        resolve(resp)
+      }
+    })
+  } else {
+    return laodData(404, params)
+  }
+}
+
+function UrlExists (url) {
+  if (location.origin === 'file://') {
+    return true
+  }
+  var http = new XMLHttpRequest();
+  http.open('HEAD', url, false);
+  http.send();
+  return http.status != 404;
+}
