@@ -7,8 +7,8 @@ if (like) {
   const fileId = day < 31 ? day : 1
   laodData('like' + fileId, {}).then(resp => {
     const offset = date.getDay()
-    const week = offset > 0 && offset < 6 ? '距离周末还有' + (5 - offset) : '周末愉快'
-    alert('like：🌹🌹🌹，今天' + day + '号,   ' + week + '！\n\n' + resp.content)
+    const week = offset > 0 && offset < 6 ? '距离周末还有' + (5 - offset) + '天' : '周末愉快'
+    alert('like：🌹🌹🌹，今天' + day + '号，' + week + '！\n\n咳咳：' + resp.content)
   })
 }
 appendBtns()
