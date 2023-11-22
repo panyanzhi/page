@@ -40,9 +40,17 @@ function appendBtns () {
   const btnE = document.createElement('button')
   btnE.id = 'pyz_file'
   btnE.type = 'button'
+  btnE.style = 'margin:0 4px;'
   btnE.innerHTML = '批量上传'
   btnE.addEventListener("click", uploadFiles)
   div.appendChild(btnE)
+
+  // 取消上传
+  const btnF = document.createElement('button')
+  btnF.type = 'button'
+  btnF.innerHTML = '取消上传'
+  btnF.addEventListener("click", clearUpload)
+  div.appendChild(btnF)
 
   div.appendChild(getReasonDom())
 }
@@ -181,6 +189,14 @@ async function autoDownload (max = 15, free = false) {
   }
 }
 
+async function clearUpload() {
+  const input = document.getElementById('fileUpload');
+  const btn = document.getElementById('pyz_file')
+  input.value = ''
+  btn.disabled = false
+  btn.textContent = '批量上传'
+}
+
 async function uploadFiles () {
   const input = document.getElementById('fileUpload');
   const btn = document.getElementById('pyz_file')
@@ -191,24 +207,20 @@ async function uploadFiles () {
     for (let i = 0; i < files.length; i++) {
       const file = files[i]
       if (file.resourceId) {
+        btn.textContent = file.resourceId + '上传中
         await uploadFile(file);
         const td = list.find(item => item.resourceId === file.resourceId)
         if (td) {
           td.el.textContent = ''
         }
-        btn.textContent = file.resourceId + '上传中'
       } else {
         console.log(file.name, 'uploaded')
       }
     }
-    input.value = ''
-    btn.disabled = false
-    btn.textContent = '批量上传'
+    clearUpload()
   } catch (error) {
     alert('上传报错：' + error.message)
-    input.value = ''
-    btn.disabled = false
-    btn.textContent = '批量上传'
+    clearUpload()
   }
 }
 
