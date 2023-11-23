@@ -207,7 +207,7 @@ async function uploadFiles () {
     for (let i = 0; i < files.length; i++) {
       const file = files[i]
       if (file.resourceId) {
-        btn.textContent = file.resourceId + '上传中
+        btn.textContent = file.resourceId + '上传中'
         await uploadFile(file);
         const td = list.find(item => item.resourceId === file.resourceId)
         if (td) {
