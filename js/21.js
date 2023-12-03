@@ -219,7 +219,7 @@ async function uploadFiles () {
     }
     clearUpload()
   } catch (error) {
-    alert('上传报错：' + error.message)
+    alert('上传报错, 请重试')
     clearUpload()
   }
 }
