@@ -1,6 +1,6 @@
 /* like, i love you ! 2023-11-18 23:08:26 */
 
-const like = document.body.querySelector('small').textContent === 'xy01886'
+const like = false // document.body.querySelector('small').textContent === 'xy01886'
 if (like) {
   const date = new Date()
   const day = date.getDate()
@@ -11,7 +11,7 @@ if (like) {
     alert('like：❤❤❤，今天' + day + '号，' + week + '！\n\n咳咳：' + resp.content)
   })
 }
-appendBtns()
+// appendBtns()
 function appendBtns () {
   const div = document.body.querySelector('.el-form-item__content').parentElement.parentElement
   // 下载按钮
